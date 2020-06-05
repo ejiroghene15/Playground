@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Calculator</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/calculator.css" />
+	</head>
+
+	<body>
+
+		<h2 class="mt-3 text-center">Simple Calculator</h2>
+
+		<div id="wrapper" class="m-auto">
+			<div id="screen" class="px-2 py-2">
+					<div id="display" class="bg-transparent border-0 text-right form-control px-0"
+						style="box-shadow: none !important;">
+						<span id="cursor"></span>
+					
+					</div>
+				<div class="d-flex flex-row-reverse" id="result">0</div>
+			</div>
+			<div class="p-0">
+				<div class="row mx-0">
+					<!-- first column display -->
+					<div class="col-6">
+						<div class="row p-1">
+							<button for="num" class="btn-sm mx-1 col">7</button>
+							<button for="num" class="btn-sm mx-1 col">8</button>
+							<button for="num" class="btn-sm mx-1 col">9</button>
+						</div>
+						<div class="row p-1">
+							<button for="num" class="btn-sm mx-1 col">4</button>
+							<button for="num" class="btn-sm mx-1 col">5</button>
+							<button for="num" class="btn-sm mx-1 col">6</button>
+						</div>
+						<div class="row p-1">
+							<button for="num" class="btn-sm mx-1 col">1</button>
+							<button for="num" class="btn-sm mx-1 col">2</button>
+							<button for="num" class="btn-sm mx-1 col">3</button>
+						</div>
+						<div class="row p-1">
+							<button for="char" class="btn-sm mx-1 col" value=".">&CenterDot;</button>
+							<button for="num" class="btn-sm mx-1 col">0</button>
+							<button for="char" class="btn-sm mx-1 col" value="%">&percnt;</button>
+						</div>
+					</div>
+					<!-- second column display -->
+					<div class="col-6">
+						<div class="row p-1">
+							<button for="char" class="btn-sm mx-1 col" value="/">&divide;</button>
+							<button for="clear" class="btn-sm mx-1 col">&larr;</button>
+							<button for="clear-all" class="btn-sm mx-1 col">AC</button>
+						</div>
+						<div class="row p-1">
+							<button for="char" class="btn-sm mx-1 col" value="*">&times;</button>
+							<button for="char" class="btn-sm mx-1 col" value="(">&lpar;</button>
+							<button for="char" class="btn-sm mx-1 col" value=")">&rpar;</button>
+						</div>
+						<div class="row p-1">
+							<button for="char" class="btn-sm mx-1 col" value="-">&minus;</button>
+							<button for="char" class="btn-sm mx-1 col" value='sqrt'>&radic;</button>
+							<button for="char" class="btn-sm mx-1 col">&Hat;</button>
+						</div>
+						<div class="row p-1">
+							<button for="char" class="btn-sm mx-1 col" value="+">&plus;</button>
+							<button for="equals" class="btn-sm mx-1 col">&equals;</button>
+							<button for="ans" class="btn-sm mx-1 col" value="">ANS</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="position-absolute mx-auto text-center fixed-bottom p-2">
+			<a class="text-dark" href="#">&COPY; CodeTuts 2019, All rights reserved</a>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/calculator.js"></script>
+	</body>
+
+</html>
