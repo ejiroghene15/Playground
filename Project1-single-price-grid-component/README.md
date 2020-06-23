@@ -5,7 +5,7 @@ I took on this challenge from [Frontend Mentors](https://www.frontendmentor.io/c
 **Technologies used** <br>
 HTML CSS(SCSS)
 
-## [View Project](https://github.com/ejiroghene15/Playground/Project1-single-price-grid-component)
+## [View Project](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/)
 
 ![Desktop Design](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/design/desktop-design.jpg)
 
