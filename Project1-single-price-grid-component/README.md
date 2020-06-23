@@ -1,4 +1,12 @@
+# Single price grid component
 
-# Single price grid component.
+I took on this challenge from [Frontend Mentors](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc). to recreate the design on the frontend, based on the sketch below.
 
-This is a simple task challenge from gotten from <a href="https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc">Frontend Mentors </a> to recreate a design
+**Technologies used** <br>
+HTML CSS(SCSS)
+
+## [View Project](https://github.com/ejiroghene15/Playground/Project1-single-price-grid-component)
+
+![Desktop Design](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/design/desktop-design.jpg)
+
+![Mobile Design](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/design/mobile-design.jpg)
