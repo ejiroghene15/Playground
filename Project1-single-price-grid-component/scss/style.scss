@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+$pc-1: hsl(179, 62%, 43%);
+$pc-2: hsl(71, 73%, 54%);
+$sc-1: hsl(204, 43%, 93%);
+$sc-2: hsl(218, 22%, 67%);
+$default-fontsize: 16px;
+
+body {
+	background-color: $sc-1;
+	font-family: "Karla", sans-serif;
+	margin: 0;
+}
+
+#card-container {
+	box-shadow: 0px 0px 25px rgb(221, 218, 218);
+	display: grid;
+	font-size: $default-fontsize;
+	margin: 8% 20% 7%;
+	position: relative;
+
+	@media screen and (max-width: 991px) {
+		margin: 8% 15% 7%;
+	}
+
+	@media screen and (max-width: 375px) {
+		margin: 8% 10% 7%;
+	}
+
+	& > #card-top {
+		background-color: whitesmoke;
+		border-radius: 7px 7px 0px 0px;
+		padding: 2em 3em;
+
+		> #info-text {
+			color: $pc-1;
+			font-size: 23px;
+			margin: 0;
+		}
+
+		> #small-info-text {
+			color: $pc-2;
+			font-size: 17px;
+			margin: 0;
+			padding: 25px 0 0px;
+		}
+
+		> #excerpt {
+			color: $sc-2;
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 1.8em;
+			margin-bottom: 0;
+		}
+	}
+
+	& > #card-bottom {
+		border-radius: 50px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		> .btm-sections {
+			padding: 2em 3em;
+			color: $sc-1;
+			> label {
+				display: block;
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+
+		> .btm-sections:nth-child(1) {
+			background-color: #2ca5a5;
+			border-bottom-left-radius: 7px;
+			@media screen and (max-width: 768px) {
+				border-radius: 0;
+			}
+			> #subprice small {
+				position: relative;
+				top: -2px;
+				left: 5px;
+				font-size: 14px;
+				color: rgba(248, 248, 255, 0.486);
+			}
+			> p {
+				font-weight: 700;
+				font-size: 15px;
+				color: rgba(248, 248, 255, 0.876);
+			}
+			> button {
+				background-color: $pc-2;
+				color: $sc-1;
+				padding: 13px;
+				width: 100%;
+				display: inline-block;
+				border: 2px solid $pc-2;
+				border-radius: 4px;
+				font-weight: 700;
+				margin-top: 15px;
+				font-size: 1em;
+			}
+		}
+
+		> .btm-sections:nth-child(2) {
+			background-color: $pc-1;
+			border-bottom-right-radius: 7px;
+			@media screen and (max-width: 768px) {
+				border-bottom-left-radius: 7px;
+			}
+			> ul {
+				list-style: none;
+				padding: 0;
+				margin-bottom: 0;
+
+				> li {
+					font-size: 14px;
+					padding: 2px 0px;
+				}
+			}
+		}
+	}
+}

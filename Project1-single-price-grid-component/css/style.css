@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  background-color: #e5eff5;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+#card-container {
+  -webkit-box-shadow: 0px 0px 25px #dddada;
+          box-shadow: 0px 0px 25px #dddada;
+  display: -ms-grid;
+  display: grid;
+  font-size: 16px;
+  margin: 8% 20% 7%;
+  position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  #card-container {
+    margin: 8% 15% 7%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #card-container {
+    margin: 8% 10% 7%;
+  }
+}
+
+#card-container > #card-top {
+  background-color: whitesmoke;
+  border-radius: 7px 7px 0px 0px;
+  padding: 2em 3em;
+}
+
+#card-container > #card-top > #info-text {
+  color: #2ab2af;
+  font-size: 23px;
+  margin: 0;
+}
+
+#card-container > #card-top > #small-info-text {
+  color: #c0df34;
+  font-size: 17px;
+  margin: 0;
+  padding: 25px 0 0px;
+}
+
+#card-container > #card-top > #excerpt {
+  color: #98a6bd;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.8em;
+  margin-bottom: 0;
+}
+
+#card-container > #card-bottom {
+  border-radius: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #card-container > #card-bottom {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+#card-container > #card-bottom > .btm-sections {
+  padding: 2em 3em;
+  color: #e5eff5;
+}
+
+#card-container > #card-bottom > .btm-sections > label {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(1) {
+  background-color: #2ca5a5;
+  border-bottom-left-radius: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  #card-container > #card-bottom > .btm-sections:nth-child(1) {
+    border-radius: 0;
+  }
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(1) > #subprice small {
+  position: relative;
+  top: -2px;
+  left: 5px;
+  font-size: 14px;
+  color: rgba(248, 248, 255, 0.486);
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(1) > p {
+  font-weight: 700;
+  font-size: 15px;
+  color: rgba(248, 248, 255, 0.876);
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(1) > button {
+  background-color: #c0df34;
+  color: #e5eff5;
+  padding: 13px;
+  width: 100%;
+  display: inline-block;
+  border: 2px solid #c0df34;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(2) {
+  background-color: #2ab2af;
+  border-bottom-right-radius: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  #card-container > #card-bottom > .btm-sections:nth-child(2) {
+    border-bottom-left-radius: 7px;
+  }
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(2) > ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#card-container > #card-bottom > .btm-sections:nth-child(2) > ul > li {
+  font-size: 14px;
+  padding: 2px 0px;
+}
