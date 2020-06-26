@@ -86,6 +86,7 @@ main {
 		border-radius: 1px 1px 7px 7px;
 		border-top: 5px solid;
 		padding: 2em;
+		max-width: 285px;
 		@media screen and (max-width: 991px) {
 			grid-area: auto !important;
 		}
