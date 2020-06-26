@@ -10,9 +10,15 @@ main {
 }
 
 #head-section {
-  width: 40%;
+  width: 35%;
   margin: 5% auto;
   text-align: center;
+}
+
+@media screen and (max-width: 1043px) {
+  #head-section {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -30,7 +36,7 @@ main {
 }
 
 #head-section > #caption {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 #head-section > #caption > * {
@@ -60,7 +66,7 @@ main {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  margin: 0 8%;
+  margin: 0 4%;
   grid-auto-rows: 100px;
   row-gap: 2.5em;
   -webkit-column-gap: 2.5em;
@@ -91,9 +97,9 @@ main {
 }
 
 .wrapper > .box {
-  -webkit-box-shadow: 0px 5px 7px #ddd;
-          box-shadow: 0px 5px 7px #ddd;
-  border-radius: 7px 7px 0px 0px;
+  -webkit-box-shadow: 0px 5px 5px #ddd;
+          box-shadow: 0px 5px 5px #ddd;
+  border-radius: 1px 1px 7px 7px;
   border-top: 5px solid;
   padding: 2em;
 }
