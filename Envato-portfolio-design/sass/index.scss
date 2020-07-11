@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+$p-red: #af112e;
+$p-bb: #041119;
+$p-lbb: #0b1820;
+$p-gray: #36393e;
+$p-white: #ffffff;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	overflow: hidden;
+	overflow-y: scroll;
+	background-color: $p-bb;
+
+	.pf-icons {
+		position: relative;
+		.nav-con {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			background-color: $p-gray;
+			margin-bottom: 20px;
+			transition: background-color 0.5s 0s ease-in-out;
+			cursor: pointer;
+			&.active,
+			&:hover {
+				background-color: $p-red;
+			}
+			img {
+				height: 22px;
+				width: 22px;
+			}
+		}
+	}
+
+	.btn-rounded {
+		border-radius: 44px;
+	}
+
+	.pbtn {
+		border: none;
+		outline: none;
+		padding: 0.8em 3em;
+		width: auto;
+		white-space: nowrap;
+		transition: background-color 0.3s 0s ease-in-out;
+
+		&.btn-normal {
+			background-color: $p-red;
+			outline: none !important;
+		}
+
+		&.btn-alt {
+			background-color: transparent;
+			border: 0.5px solid $p-red;
+			&:hover {
+				background-color: $p-red;
+			}
+		}
+	}
+
+	._coloredlabel {
+		color: $p-red;
+	}
+
+	.pf-labels {
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 10%;
+		> h1 {
+			text-transform: uppercase;
+			&:nth-child(1) {
+				color: $p-lbb;
+				font-weight: 900;
+				font-size: 10em;
+				position: absolute;
+				width: 100%;
+			}
+			&:nth-child(2) {
+				font-weight: 900;
+				position: relative;
+				top: 60px;
+				font-size: 4em;
+				color: $p-white;
+			}
+		}
+	}
+	.hr {
+		width: 55%;
+		border: 1px solid $p-gray;
+	}
+}
+
+@mixin mq($arg) {
+	@media screen and (max-width: $arg) {
+		@content;
+	}
+}
+
+#pf-hero {
+	position: relative;
+	top: -30px;
+	& #hero-angle {
+		position: absolute;
+		height: 100%;
+		width: 30%;
+		background-image: url("../imgs/rect.png");
+	}
+	& #hero-img {
+		position: relative;
+		z-index: 5;
+		left: 30px;
+	}
+	& #hero-text {
+		margin: -4rem 0 0rem -7rem;
+		padding: 0 5em !important;
+		color: $p-white;
+		> #dummy-name {
+			font-weight: 900;
+			font-size: 50px;
+		}
+		> p {
+			margin-top: 20px;
+			line-height: 1.4em;
+			font-size: 1.5em;
+		}
+	}
+}
+
+#pf-about {
+	position: relative;
+	margin-bottom: 2em;
+	.userinfo {
+		> h4 {
+			padding: 0.5em 0em;
+		}
+	}
+	#johndoe {
+		margin-top: -18%;
+		position: relative;
+		&::after {
+			right: 0px;
+			bottom: 0;
+			z-index: -1;
+			position: absolute;
+			width: 85%;
+			height: 93%;
+			content: " ";
+			border: 20px solid $p-red;
+			border-radius: 20px;
+		}
+	}
+	._card {
+		border: 1px solid $p-gray;
+		border-radius: 20px;
+		height: 100%;
+		> ._coloredlabel {
+			font-weight: 900;
+			font-size: 60px;
+		}
+		> p {
+			font-size: 28px;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			line-height: 35px;
+			> .line {
+				display: inline-block;
+				width: 100px !important;
+				height: 2px;
+				position: relative;
+				margin-right: 20px;
+				top: 20px;
+				background-color: $p-white;
+			}
+		}
+	}
+
+	#timeline {
+		._activity {
+			margin-bottom: 3em;
+		}
+		.label {
+			background-color: $p-gray;
+			color: $p-white;
+			border-radius: 30px;
+			text-align: center;
+			padding: 0.8em;
+			width: 100px;
+			&.lg {
+				width: 200px;
+			}
+		}
+		.tl-icon {
+			position: relative;
+			top: -15px;
+			> span {
+				width: 2px;
+				background-color: $p-gray;
+			}
+		}
+	}
+}
+
+#pf-portfolio {
+	#outerbound {
+		&::before {
+			border: 20px solid $p-red;
+			border-radius: 20px;
+			position: absolute;
+			width: 100%;
+			height: 90%;
+			content: " ";
+			left: -20%;
+			bottom: 25%;
+		}
+		position: relative;
+		margin-bottom: 7%;
+	}
+	#secondbound {
+		position: relative;
+		&::before {
+			border: 20px solid $p-red;
+			border-radius: 20px;
+			position: absolute;
+			margin: 0 auto;
+			width: 79%;
+			height: 80%;
+			left: 12%;
+			bottom: 15%;
+			content: " ";
+			z-index: -1;
+		}
+	}
+	#thirdbound {
+		position: relative;
+		&::before {
+			border: 20px solid $p-red;
+			border-radius: 20px;
+			position: absolute;
+			margin: 0 auto;
+			width: 120%;
+			height: 80%;
+			right: -70%;
+			left: 0;
+			top: 12%;
+			content: " ";
+			z-index: -1;
+		}
+	}
+}
+
+#pf-contact {
+	margin-bottom: 6em;
+
+	.socials {
+		position: relative;
+		.nav-con {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+			background-color: $p-gray;
+			margin-right: 20px;
+			transition: background-color 0.3s 0s ease-in-out;
+			cursor: pointer;
+			padding: 30px;
+			&:hover {
+				background-color: $p-red;
+			}
+		}
+	}
+	#form {
+		.form-control {
+			border-radius: 40px;
+			background-color: $p-gray;
+			color: $p-white;
+			padding: 2em;
+			border: none !important;
+			margin-bottom: 22px;
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+#pf-footer {
+	margin-bottom: 3%;
+	.footer-underlay {
+		h1 {
+			font-weight: 900;
+			font-size: 4em;
+			letter-spacing: 0.1em;
+			color: $p-lbb;
+		}
+	}
+	.footer-text {
+		color: $p-white !important;
+		font-size: 1.2em;
+		nav {
+			text-transform: capitalize;
+			a {
+				text-decoration: none;
+				transition: color 0.2s 0s ease-out;
+				&:nth-of-type(2) {
+					border-right: 2px solid $p-gray;
+					border-left: 2px solid $p-gray;
+				}
+				&:hover {
+					color: $p-red !important;
+				}
+			}
+		}
+	}
+}
+
+@include mq(768px) {
+	#pf-hero {
+		// position: relative;
+		// top: -30px;
+		// & #hero-angle {
+		// 	position: absolute;
+		// 	height: 100%;
+		// 	width: 30%;
+		// 	background-image: url("../imgs/rect.png");
+		// }
+		& #hero-img {
+			// position: absolute;
+			z-index: 5;
+			left: 30px;
+		}
+		// & #hero-text {
+		// 	margin: -4rem 0 0rem -7rem;
+		// 	padding: 0 5em !important;
+		// 	color: $p-white;
+		// 	> #dummy-name {
+		// 		font-weight: 900;
+		// 		font-size: 50px;
+		// 	}
+		// 	> p {
+		// 		margin-top: 20px;
+		// 		line-height: 1.4em;
+		// 		font-size: 1.5em;
+		// 	}
+		// }
+	}
+}
