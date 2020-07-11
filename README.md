@@ -36,9 +36,9 @@ One of my task during the HNGI internship. Implementing the design of an Envato 
 **Technologies used** <br>
 HTML CSS(Bootstrap, SCSS) JavaScript.
 
-## [View Project](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/)
+### [View Project](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/)
 
-## [Link to Figma Design](https://www.figma.com/file/f4wx0UY6UQvjES2KWJLNGY/Envato-Designer-Portfolio?node-id=27%3A831)
+**([Link to Figma Design](https://www.figma.com/file/f4wx0UY6UQvjES2KWJLNGY/Envato-Designer-Portfolio?node-id=27%3A831))**
 
 ![Desktop Design](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/design/desktop.png)
 
