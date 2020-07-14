@@ -15,7 +15,9 @@
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
 	<body>
-		<main>
+		<main id="main-wrapper">
+
+
 			<section
 				id="pf-hero"
 				data-aos="zoom-out"
@@ -44,7 +46,7 @@
 								<button class="pbtn btn-normal btn-rounded text-light mr-4">
 									MORE ABOUT ME
 								</button>
-								<button class="pbtn btn-alt btn-rounded text-light">
+								<button class="pbtn btn-alt btn-rounded text-light d-lg-block d-md-block d-none">
 									PORTFOLIO
 								</button>
 							</div>
@@ -86,11 +88,11 @@
 				</div>
 
 				<!-- open container -->
-				<div class="container mt-5 pt-4">
+				<div class="container mt-5">
 					<!-- user details -->
 					<div class="position-relative mb-5 py-5">
 						<div class="row">
-							<div class="col-lg-7 col-md-7">
+							<div class="col-lg-7 col-md-7 col-sm-12">
 								<h2 class="text-light py-3">PERSONAL INFOS</h2>
 								<div class="d-flex">
 									<div class="userinfo mr-5">
@@ -633,7 +635,7 @@
 				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
 				offset: 200, // offset (in px) from the original trigger point
 				duration: 1000, // values from 0 to 3000, with step 50ms
-				once: false, // whether animation should happen only once - while scrolling down
+				once: true, // whether animation should happen only once - while scrolling down
 				mirror: false, // whether elements should animate out while scrolling past them
 				anchorPlacement: "center-center", // defines which position of the element regarding to window should trigger the animation
 			});

@@ -79,7 +79,16 @@ body ._coloredlabel {
 body .pf-labels {
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .pf-labels > h1 {
@@ -89,7 +98,7 @@ body .pf-labels > h1 {
 body .pf-labels > h1:nth-child(1) {
   color: #0b1820;
   font-weight: 900;
-  font-size: 10em;
+  font-size: 9em;
   position: absolute;
   width: 100%;
 }
@@ -97,8 +106,8 @@ body .pf-labels > h1:nth-child(1) {
 body .pf-labels > h1:nth-child(2) {
   font-weight: 900;
   position: relative;
-  top: 60px;
-  font-size: 4em;
+  font-size: 3.7em;
+  top: 5px;
   color: #ffffff;
 }
 
@@ -143,8 +152,8 @@ body .hr {
 }
 
 #pf-about {
+  margin-top: 4em;
   position: relative;
-  margin-bottom: 2em;
 }
 
 #pf-about .userinfo > h4 {
@@ -228,6 +237,10 @@ body .hr {
   background-color: #36393e;
 }
 
+#pf-portfolio {
+  margin-top: 4em;
+}
+
 #pf-portfolio #outerbound {
   position: relative;
   margin-bottom: 7%;
@@ -280,7 +293,7 @@ body .hr {
 }
 
 #pf-contact {
-  margin-bottom: 6em;
+  margin-top: 6em;
 }
 
 #pf-contact .socials {
@@ -327,7 +340,7 @@ body .hr {
 }
 
 #pf-footer {
-  margin-bottom: 3%;
+  margin: 6% 0 2%;
 }
 
 #pf-footer .footer-underlay h1 {
@@ -362,8 +375,90 @@ body .hr {
 }
 
 @media screen and (max-width: 768px) {
+  #main-wrapper > section {
+    display: none;
+  }
+  .pf-icons {
+    display: none !important;
+    position: absolute !important;
+    right: 10px;
+    bottom: 100px;
+  }
+  .pf-labels {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pf-labels > h1 {
+    text-transform: uppercase;
+  }
+  .pf-labels > h1:nth-child(1) {
+    color: #0b1820;
+    font-weight: 900;
+    font-size: 9em;
+    position: absolute;
+    width: 100%;
+  }
+  .pf-labels > h1:nth-child(2) {
+    font-weight: 900;
+    position: relative;
+    font-size: 3.7em;
+    top: 5px;
+    color: #ffffff;
+  }
+  #pf-hero {
+    display: block !important;
+    background-image: url(../imgs/img1.png);
+    background-size: 100% 100%;
+    background-position: center -15vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  #pf-hero::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: " ";
+    top: 0;
+    opacity: 0.9;
+    background-color: #041119;
+  }
+  #pf-hero > div {
+    position: absolute;
+    height: 100%;
+  }
+  #pf-hero #hero-angle,
   #pf-hero #hero-img {
-    z-index: 5;
-    left: 30px;
+    display: none;
+  }
+  #pf-hero #hero-text {
+    margin: -25% 7% 0;
+    padding: 0em !important;
+    color: #ffffff;
+  }
+  #pf-hero #hero-text > h1:first-of-type {
+    font-size: 1.5em;
+  }
+  #pf-hero #hero-text > #dummy-name {
+    font-size: 2em;
+  }
+  #pf-hero #hero-text > p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+  #pf-about {
+    display: block !important;
   }
 }

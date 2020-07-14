@@ -5,6 +5,12 @@ $p-lbb: #0b1820;
 $p-gray: #36393e;
 $p-white: #ffffff;
 
+@mixin mq($arg) {
+	@media screen and (max-width: $arg) {
+		@content;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -73,21 +79,24 @@ body {
 	.pf-labels {
 		text-transform: uppercase;
 		position: relative;
-		margin-bottom: 10%;
+		margin-bottom: 7%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		> h1 {
 			text-transform: uppercase;
 			&:nth-child(1) {
 				color: $p-lbb;
 				font-weight: 900;
-				font-size: 10em;
+				font-size: 9em;
 				position: absolute;
 				width: 100%;
 			}
 			&:nth-child(2) {
 				font-weight: 900;
 				position: relative;
-				top: 60px;
-				font-size: 4em;
+				font-size: 3.7em;
+				top: 5px;
 				color: $p-white;
 			}
 		}
@@ -95,12 +104,6 @@ body {
 	.hr {
 		width: 55%;
 		border: 1px solid $p-gray;
-	}
-}
-
-@mixin mq($arg) {
-	@media screen and (max-width: $arg) {
-		@content;
 	}
 }
 
@@ -135,8 +138,8 @@ body {
 }
 
 #pf-about {
+	margin-top: 4em;
 	position: relative;
-	margin-bottom: 2em;
 	.userinfo {
 		> h4 {
 			padding: 0.5em 0em;
@@ -210,6 +213,7 @@ body {
 }
 
 #pf-portfolio {
+	margin-top: 4em;
 	#outerbound {
 		&::before {
 			border: 20px solid $p-red;
@@ -258,8 +262,7 @@ body {
 }
 
 #pf-contact {
-	margin-bottom: 6em;
-
+	margin-top: 6em;
 	.socials {
 		position: relative;
 		.nav-con {
@@ -295,7 +298,7 @@ body {
 }
 
 #pf-footer {
-	margin-bottom: 3%;
+	margin: 6% 0 2%;
 	.footer-underlay {
 		h1 {
 			font-weight: 900;
@@ -325,33 +328,92 @@ body {
 }
 
 @include mq(768px) {
-	#pf-hero {
-		// position: relative;
-		// top: -30px;
-		// & #hero-angle {
-		// 	position: absolute;
-		// 	height: 100%;
-		// 	width: 30%;
-		// 	background-image: url("../imgs/rect.png");
-		// }
-		& #hero-img {
-			// position: absolute;
-			z-index: 5;
-			left: 30px;
+	#main-wrapper {
+		> section {
+			display: none;
 		}
-		// & #hero-text {
-		// 	margin: -4rem 0 0rem -7rem;
-		// 	padding: 0 5em !important;
-		// 	color: $p-white;
-		// 	> #dummy-name {
-		// 		font-weight: 900;
-		// 		font-size: 50px;
-		// 	}
-		// 	> p {
-		// 		margin-top: 20px;
-		// 		line-height: 1.4em;
-		// 		font-size: 1.5em;
-		// 	}
-		// }
+	}
+	.pf-icons {
+		display: none !important;
+		position: absolute !important;
+		right: 10px;
+		bottom: 100px;
+	}
+
+	.pf-labels {
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 7%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		> h1 {
+			text-transform: uppercase;
+			&:nth-child(1) {
+				color: $p-lbb;
+				font-weight: 900;
+				font-size: 9em;
+				position: absolute;
+				width: 100%;
+			}
+			&:nth-child(2) {
+				font-weight: 900;
+				position: relative;
+				font-size: 3.7em;
+				top: 5px;
+				color: $p-white;
+			}
+		}
+	}
+
+	#pf-hero {
+		display: block !important;
+		background-image: url(../imgs/img1.png);
+		background-size: 100% 100%;
+		background-position: center -15vh;
+		background-repeat: no-repeat;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+
+		&::before {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			content: " ";
+			top: 0;
+			opacity: 0.9;
+			background-color: $p-bb;
+		}
+
+		> div {
+			position: absolute;
+			height: 100%;
+		}
+		#hero-angle,
+		#hero-img {
+			display: none;
+		}
+
+		#hero-text {
+			margin: -25% 7% 0;
+			padding: 0em !important;
+			color: $p-white;
+			> h1:first-of-type {
+				font-size: 1.5em;
+			}
+			> #dummy-name {
+				font-size: 2em;
+			}
+			> p {
+				line-height: 1.5em;
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	#pf-about {
+		display: block !important;
 	}
 }
