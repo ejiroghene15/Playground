@@ -29,9 +29,9 @@ HTML CSS(SCSS)
 
 ![Mobile Design](https://ejiroghene15.github.io/Playground/Project2-four-card-feature-section/design/mobile-design.jpg)
 
-## Envato Portfolio Design
+## Project3: Envato Portfolio Design
 
-One of my task during the HNGI internship. Implementing the design of an Envato Designer Portfolio. It's still a work in progress, yet to implement responsiveness for smaller screens.
+One of my task during the HNGI7 internship. Implementing the design of an Envato Designer Portfolio. It's still a work in progress, yet to implement responsiveness for smaller screens.
 
 **Technologies used** <br>
 HTML CSS(Bootstrap, SCSS) JavaScript.
@@ -43,3 +43,14 @@ HTML CSS(Bootstrap, SCSS) JavaScript.
 ![Desktop Design](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/design/desktop.png)
 
 ![Mobile Design](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/design/mobile.png)
+
+## Project4: Let's Celibate
+
+**HNGI7 Task**: Implementation of the landing page of an app for users to enter their email address to get notified on the launch of the app.
+
+**Technologies used** <br>
+HTML CSS(Bootstrap, SCSS) JavaScript(Jquery) (APIs).
+
+### [View Project](https://ejiroghene15.github.io/Playground/Celibate/)
+
+**([Link to Figma Design](https://www.figma.com/file/dbtJv1T4rdLTaQRcGXnCXy/Let's-Celibate?node-id=4%3A496))**
