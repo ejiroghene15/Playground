@@ -12,10 +12,6 @@ HTML CSS(SCSS)
 
 ### [View Project](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/)
 
-![Desktop Design](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/design/desktop-design.jpg)
-
-![Mobile Design](https://ejiroghene15.github.io/Playground/Project1-single-price-grid-component/design/mobile-design.jpg)
-
 ## Project2: four-card-feature-section
 
 I took on this challenge from [Frontend Mentors](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK/intro). to recreate the design on the frontend, based on the sketch below. The project relies heavily on the implementation of css grids for easy responsiveness of the page on any viewport. It shows how easy it is to use grids to make a web page flexible and scalable to fit devices with different screen sizes.
@@ -24,10 +20,6 @@ I took on this challenge from [Frontend Mentors](https://www.frontendmentor.io/c
 HTML CSS(SCSS)
 
 ### [View Project](https://ejiroghene15.github.io/Playground/Project2-four-card-feature-section/)
-
-![Desktop Design](https://ejiroghene15.github.io/Playground/Project2-four-card-feature-section/design/desktop-design.jpg)
-
-![Mobile Design](https://ejiroghene15.github.io/Playground/Project2-four-card-feature-section/design/mobile-design.jpg)
 
 ## Project3: Envato Portfolio Design
 
@@ -39,10 +31,6 @@ HTML CSS(Bootstrap, SCSS) JavaScript.
 ### [View Project](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/)
 
 **([Link to Figma Design](https://www.figma.com/file/f4wx0UY6UQvjES2KWJLNGY/Envato-Designer-Portfolio?node-id=27%3A831))**
-
-![Desktop Design](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/design/desktop.png)
-
-![Mobile Design](https://ejiroghene15.github.io/Playground/Envato-portfolio-design/design/mobile.png)
 
 ## Project4: Let's Celibate
 
