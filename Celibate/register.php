@@ -20,15 +20,15 @@ if (isset($_POST['notify-user'])) {
 	extract($_POST);
 	$email = validateInput($email);
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		echo "Please enter a valid email address";
+		echo json_encode("Please enter a valid email address");
 	} else {
 		$email_exists = $sql->query("SELECT email FROM users WHERE email = '$email'");
 		if ($sql->affected_rows) {
-			echo "This Email has already been registered";
+			echo json_encode("This Email has already been registered");
 		} else {
 			$sql->query("INSERT INTO users (`email`) VALUES ('$email')");
 			if ($sql->affected_rows) {
-				echo "successful";
+				echo json_encode("successful");
 			}
 		}
 	}
