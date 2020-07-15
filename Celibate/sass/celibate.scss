@@ -58,7 +58,7 @@ body {
 		border-radius: 31px;
 		padding: 1.4em !important;
 		box-shadow: none;
-		margin: 30px 0px 20px;
+		margin: 10px 0px 20px;
 	}
 
 	._section2 {
@@ -179,7 +179,7 @@ body {
 		margin: 0;
 	}
 	#social-icons {
-		> img:not(:last-of-type) {
+		> a:not(:last-of-type) {
 			margin-right: 15px;
 		}
 	}

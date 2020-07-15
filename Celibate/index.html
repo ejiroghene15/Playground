@@ -10,6 +10,17 @@
 			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+		/>
+
 		<link rel="stylesheet" href="./css/celibate.css" />
 	</head>
 	<body class="m-0">
@@ -39,12 +50,15 @@
 								We help sex addicts conquer uncontrollable urges and stay
 								celibate with very easy and effective methods
 							</p>
-							<form action="">
+							<form id="form" class="mt-4">
 								<div class="form-group">
+									<div id="response"></div>
 									<input
 										type="email"
+										name="email"
 										class="form-control notify-input"
 										placeholder="Enter Email Address"
+										required
 									/>
 								</div>
 								<button class="btn notify">
@@ -62,7 +76,9 @@
 				</section>
 
 				<div class="text-center" style="margin: 15% 0;">
-					<img src="./imgs/arrow-down.png" alt="" />
+					<a href="#" >
+						<img class="animate__animated animate__shakeY animate__slower	3s animate__infinite	infinite" src="./imgs/arrow-down.png" alt="" />
+					</a>
 				</div>
 
 				<section id="sub-sec-1" class="sub-sections">
@@ -182,9 +198,15 @@
 							<span>Let’s Celibate</span>
 						</p>
 						<p id="social-icons">
-							<img src="./imgs/fb1.png" alt="" />
-							<img src="./imgs/tw1.png" alt="" />
-							<img src="./imgs/ig.png" alt="" />
+							<a href="https://facebook.com" target="_blank"
+								><img src="./imgs/fb1.png" alt=""
+							/></a>
+							<a href="https://twitter.com" target="_blank"
+								><img src="./imgs/tw1.png" alt=""
+							/></a>
+							<a href="https://instagram.com" target="_blank">
+								<img src="./imgs/ig.png" alt="" />
+							</a>
 						</p>
 					</div>
 				</div>
@@ -206,6 +228,6 @@
 			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 			crossorigin="anonymous"
 		></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>
-
