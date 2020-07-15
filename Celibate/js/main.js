@@ -24,9 +24,6 @@ $(function () {
 		fetch("https://celibate.000webhostapp.com/register.php", {
 			method: "POST",
 			mode: "no-cors",
-			headers: {
-				"Content-Type": "multipart/form-data",
-			},
 			body: fd,
 		})
 			.then((res) => res.text())
