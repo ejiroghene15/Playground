@@ -16,6 +16,7 @@
 			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
 			crossorigin="anonymous"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
@@ -44,7 +45,13 @@
 					</nav>
 				</header>
 
-				<section id="main" class="position-relative">
+				<section
+					id="main"
+					class="position-relative"
+					data-aos="zoom-out"
+					data-aos-delay="0"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row">
 						<div class="col-lg-6 _section1">
 							<h3 id="main-label">Anyone can stay celibate</h3>
@@ -88,7 +95,13 @@
 					</a>
 				</div>
 
-				<section id="sub-sec-1" class="sub-sections">
+				<section
+					id="sub-sec-1"
+					class="sub-sections"
+					data-aos="fade-up"
+					data-aos-delay="0"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
@@ -110,7 +123,13 @@
 					</div>
 				</section>
 
-				<section id="sub-sec-2" class="sub-sections">
+				<section
+					id="sub-sec-2"
+					class="sub-sections"
+					data-aos="slide-left"
+					data-aos-delay="500"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row flex-row-reverse">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
@@ -131,7 +150,13 @@
 					</div>
 				</section>
 
-				<section id="sub-sec-3" class="sub-sections">
+				<section
+					id="sub-sec-3"
+					class="sub-sections"
+					data-aos="slide-right"
+					data-aos-delay="700"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
@@ -152,7 +177,13 @@
 					</div>
 				</section>
 
-				<section id="sub-sec-4" class="sub-sections">
+				<section
+					id="sub-sec-4"
+					class="sub-sections"
+					data-aos="flip-down"
+					data-aos-delay="1000"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row flex-row-reverse">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
@@ -173,7 +204,13 @@
 					</div>
 				</section>
 
-				<section id="sub-sec-5" class="sub-sections">
+				<section
+					id="sub-sec-5"
+					class="sub-sections"
+					data-aos="flip-down"
+					data-aos-delay="1000"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
@@ -194,7 +231,13 @@
 					</div>
 				</section>
 
-				<section id="sub-sec-6" class="sub-sections">
+				<section
+					id="sub-sec-6"
+					class="sub-sections"
+					data-aos="fade-up"
+					data-aos-delay="1000"
+					data-aos-easing="ease-in-out"
+				>
 					<div class="row flex-row-reverse">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
@@ -424,6 +467,31 @@
 			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+
+			// You can also pass an optional settings object
+			// below listed default settings
+			AOS.init({
+				// Global settings:
+				disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+				startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+				initClassName: "aos-init", // class applied after initialization
+				animatedClassName: "aos-animate", // class applied on animation
+				useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+				disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+				debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+				throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+				offset: 200, // offset (in px) from the original trigger point
+				duration: 1000, // values from 0 to 3000, with step 50ms
+				once: true, // whether animation should happen only once - while scrolling down
+				mirror: false, // whether elements should animate out while scrolling past them
+				anchorPlacement: "center-center", // defines which position of the element regarding to window should trigger the animation
+			});
+		</script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>
