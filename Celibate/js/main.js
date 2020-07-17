@@ -3,8 +3,11 @@ $(function () {
 		e.preventDefault();
 		let response_template = (color, status) => {
 			return `
-			<div class="${color} text-light rounded p-3 mb-3">
+			<div class="${color} alert alert-dismissible fade show text-light rounded p-3 mb-3" role='alert'>
 				<h6 class="m-0">${status}</h6>
+				<a href="#" class="close" data-dismiss="alert" aria-label="Close">
+    				<span aria-hidden="true">&times;</span>
+  				</a>
 			</div>
 			`;
 		};
