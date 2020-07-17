@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 $p-blue: #0068ff;
 $p-yellow: #ffdb00;
 $p-pink: #ff7272;
 
 body {
 	background-color: #fdfdfd;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 
 	.lg-logo {
 		position: relative;
@@ -83,6 +83,7 @@ body {
 
 	.info-gph {
 		position: absolute;
+		z-index: -1;
 		&::before {
 			border: 2px solid;
 			position: relative;
@@ -128,7 +129,7 @@ body {
 
 #sub-sec-2 {
 	._section1 {
-		.info-gph::before {
+		.info-gph::before { 
 			border-color: $p-blue;
 		}
 	}
@@ -214,7 +215,7 @@ body {
 	.lg-logo {
 		display: none;
 	}
-	.sm-logo{
+	.sm-logo {
 		display: block !important;
 	}
 	.content.container {
