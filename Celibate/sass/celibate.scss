@@ -1,25 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Muli:wght@200;400;600;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 $p-blue: #0068ff;
 $p-yellow: #ffdb00;
 $p-pink: #ff7272;
 
 body {
 	background-color: #fdfdfd;
-	font-family: "Muli", sans-serif;
+	font-family: 'Lato', sans-serif;
 
-	.info-gph {
-		position: absolute;
-		&::before {
-			border: 2px solid;
-			position: relative;
-			width: 400px;
-			height: 400px;
-			display: block;
-			margin: auto;
-			content: " ";
-			border-radius: 50%;
-			z-index: -1;
-		}
+	.lg-logo {
+		position: relative;
+		top: 4px;
 	}
 }
 
@@ -81,6 +71,8 @@ body {
 		img {
 			position: relative;
 			right: -20px;
+			height: 95%;
+			width: 95%;
 		}
 	}
 }
@@ -88,6 +80,21 @@ body {
 .sub-sections {
 	margin: 10% 0px;
 	position: relative;
+
+	.info-gph {
+		position: absolute;
+		&::before {
+			border: 2px solid;
+			position: relative;
+			width: 400px;
+			height: 400px;
+			display: block;
+			margin: auto;
+			content: " ";
+			border-radius: 50%;
+			z-index: -1;
+		}
+	}
 
 	._section1 {
 		display: flex;
@@ -175,9 +182,6 @@ body {
 }
 
 @include mq(991px) {
-	.container {
-		// width: 98% !;
-	}
 	.arr-down {
 		margin: 15% 0;
 	}
@@ -188,6 +192,16 @@ body {
 		}
 	}
 	.sub-sections {
+		.info-gph {
+			&::before {
+				width: 300px;
+				height: 300px;
+			}
+			& + img {
+				height: 80%;
+			}
+		}
+
 		._section2 {
 			> h4 {
 				width: 100%;
@@ -197,11 +211,14 @@ body {
 }
 
 @include mq(768px) {
-	body {
-		.info-gph {
-			display: block;
-			margin: 0 auto 10%;
-		}
+	.lg-logo {
+		display: none;
+	}
+	.sm-logo{
+		display: block !important;
+	}
+	.content.container {
+		max-width: 100%;
 	}
 
 	#main {
@@ -215,7 +232,19 @@ body {
 	}
 
 	.sub-sections {
-		margin: 35% 5%;
+		margin: 20% 5%;
+		.info-gph {
+			display: block;
+			margin: 0 auto 5%;
+			&::before {
+				display: none;
+			}
+			& + img {
+				width: 100% !important;
+				margin-bottom: 10%;
+			}
+		}
+
 		> .row {
 			display: block !important;
 		}

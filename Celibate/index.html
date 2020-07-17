@@ -20,7 +20,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
 		/>
-
+		<link rel="stylesheet" href="./css/takefive_min.css" />
 		<link rel="stylesheet" href="./css/celibate.css" />
 	</head>
 	<body class="m-0">
@@ -29,7 +29,14 @@
 				<header class="py-5">
 					<nav class="d-flex justify-content-between">
 						<a href="#" id="brand">
-							<img src="./imgs/logo-celibate-lg.png" alt="" />
+							<img src="./imgs/logo-celibate-lg.png" class="lg-logo" alt="" />
+							<img
+								src="./imgs/logo-celibate.png"
+								class="sm-logo d-none"
+								height="50"
+								width="50"
+								alt=""
+							/>
 						</a>
 						<a class="btn notify">
 							Get Early Access
@@ -66,7 +73,9 @@
 						</div>
 					</div>
 				</section>
+			</div>
 
+			<div class="content container">
 				<div class="text-center arr-down">
 					<a href="#">
 						<img
@@ -81,7 +90,9 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
-							<img src="./imgs/plans-scr.svg" alt="" />
+							<a href="#plans-1">
+								<img src="./imgs/plans-scr.png" alt="" />
+							</a>
 						</div>
 						<div class="col-lg-6 col-md-6 _section2">
 							<h4>Effective plans brought to you on a daily basis</h4>
@@ -101,7 +112,9 @@
 					<div class="row flex-row-reverse">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
-							<img src="./imgs/home-scr.png" alt="" />
+							<a href="#home-2">
+								<img src="./imgs/home-scr.png" alt="" />
+							</a>
 						</div>
 						<div class="col-lg-6 col-md-6 _section2">
 							<h4>An experience tailored just for you</h4>
@@ -120,7 +133,9 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
-							<img src="./imgs/stats-scr.png" alt="" />
+							<a href="#stat-3">
+								<img src="./imgs/stats-scr.png" alt="" />
+							</a>
 						</div>
 						<div class="col-lg-6 col-md-6 _section2">
 							<h4>Progress tracking to keep you in the loop</h4>
@@ -139,7 +154,9 @@
 					<div class="row flex-row-reverse">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
-							<img src="./imgs/note-scr.png" alt="" />
+							<a href="#note-4">
+								<img src="./imgs/note-scr.png" alt="" />
+							</a>
 						</div>
 						<div class="col-lg-6 col-md-6 _section2">
 							<h4>Pen your thoughts and take jottings easily</h4>
@@ -158,7 +175,9 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
-							<img src="./imgs/reward-scr.svg" alt="" />
+							<a href="#reward-5">
+								<img src="./imgs/reward-scr.svg" alt="" />
+							</a>
 						</div>
 						<div class="col-lg-6 col-md-6 _section2">
 							<h4>Cash-worthy rewards upon completing plans</h4>
@@ -177,7 +196,9 @@
 					<div class="row flex-row-reverse">
 						<div class="col-lg-6 col-md-6 _section1">
 							<div class="info-gph"></div>
-							<img src="./imgs/calendar-scr.svg" alt="" />
+							<a href="#events-6">
+								<img src="./imgs/calendar-scr.svg" alt="" />
+							</a>
 						</div>
 						<div class="col-lg-6 col-md-6 _section2">
 							<h4>Manage all tasks in one calender window</h4>
@@ -216,6 +237,123 @@
 			</footer>
 		</main>
 
+		<section itemscope itemtype="http://schema.org/ImageGallery">
+			<article
+				id="plans-1"
+				class="slide"
+				itemscope
+				itemtype="http://schema.org/ImageObject"
+			>
+				<nav>
+					<a href="#nowhere" rel="parent">Close</a>
+					<a href="#home-2" rel="next"> #2 Home </a>
+				</nav>
+				<header>
+					<h1>#1 Plans</h1>
+				</header>
+				<figure>
+					<img class="border-0" src="./imgs/plans-scr.png" itemprop="image" />
+				</figure>
+			</article>
+
+			<article
+				id="home-2"
+				class="slide"
+				itemscope
+				itemtype="http://schema.org/ImageObject"
+			>
+				<nav>
+					<a href="#nowhere" rel="parent">Close</a>
+					<a href="#stats-3" rel="next"> #3 Stats</a>
+					<a href="#plans-1" rel="prev"> #1 Plans</a>
+				</nav>
+				<header>
+					<h1>#2 Home</h1>
+				</header>
+				<figure>
+					<img class="border-0" src="./imgs/home-scr.png" itemprop="image" />
+				</figure>
+			</article>
+
+			<article
+				id="stats-3"
+				class="slide"
+				itemscope
+				itemtype="http://schema.org/ImageObject"
+			>
+				<nav>
+					<a href="#nowhere" rel="parent">Close</a>
+					<a href="#note-4" rel="next"> #4 Note</a>
+					<a href="#home-2" rel="prev"> #2 Home</a>
+				</nav>
+				<header>
+					<h1>#3 Stats</h1>
+				</header>
+				<figure>
+					<img class="border-0" src="./imgs/stats-scr.png" itemprop="image" />
+				</figure>
+			</article>
+
+			<article
+				id="note-4"
+				class="slide"
+				itemscope
+				itemtype="http://schema.org/ImageObject"
+			>
+				<nav>
+					<a href="#nowhere" rel="parent">Close</a>
+					<a href="#reward-5" rel="next"> #5 Rewards</a>
+					<a href="#stats-3" rel="prev"> #3 Stats</a>
+				</nav>
+				<header>
+					<h1>#4 Notes</h1>
+				</header>
+				<figure>
+					<img class="border-0" src="./imgs/note-scr.png" itemprop="image" />
+				</figure>
+			</article>
+
+			<article
+				id="reward-5"
+				class="slide"
+				itemscope
+				itemtype="http://schema.org/ImageObject"
+			>
+				<nav>
+					<a href="#nowhere" rel="parent">Close</a>
+					<a href="#events-6" rel="next"> #6 Events</a>
+					<a href="#note-4" rel="prev"> #4 Notes</a>
+				</nav>
+				<header>
+					<h1>#5 Rewards</h1>
+				</header>
+				<figure>
+					<img class="border-0" src="./imgs/reward-scr.svg" itemprop="image" />
+				</figure>
+			</article>
+
+			<article
+				id="events-6"
+				class="slide"
+				itemscope
+				itemtype="http://schema.org/ImageObject"
+			>
+				<nav>
+					<a href="#nowhere" rel="parent">Close</a>
+					<a href="#reward-5" rel="prev"> #5 Rewards</a>
+				</nav>
+				<header>
+					<h1>#6 Events</h1>
+				</header>
+				<figure>
+					<img
+						class="border-0"
+						src="./imgs/calendar-scr.svg"
+						itemprop="image"
+					/>
+				</figure>
+			</article>
+		</section>
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
