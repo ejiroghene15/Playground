@@ -113,7 +113,7 @@ body {
 			margin-bottom: 3%;
 		}
 		> p {
-			font-size: 15px;
+			font-size: 1em;
 			line-height: 28px;
 		}
 	}
@@ -129,7 +129,7 @@ body {
 
 #sub-sec-2 {
 	._section1 {
-		.info-gph::before { 
+		.info-gph::before {
 			border-color: $p-blue;
 		}
 	}
@@ -195,11 +195,14 @@ body {
 	.sub-sections {
 		.info-gph {
 			&::before {
-				width: 300px;
-				height: 300px;
+				width: 320px;
+				height: 320px;
 			}
-			& + img {
-				height: 80%;
+			& + a {
+				display: contents;
+				> img {
+					height: 80%;
+				}
 			}
 		}
 
@@ -240,7 +243,7 @@ body {
 			&::before {
 				display: none;
 			}
-			& + img {
+			& + a > img {
 				width: 100% !important;
 				margin-bottom: 10%;
 			}
