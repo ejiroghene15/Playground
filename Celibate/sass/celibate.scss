@@ -3,6 +3,10 @@ $p-blue: #0068ff;
 $p-yellow: #ffdb00;
 $p-pink: #ff7272;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #fdfdfd;
 	font-family: "Lato", sans-serif;
@@ -189,7 +193,12 @@ body {
 	#main {
 		._section2 {
 			justify-content: center;
-			display: none;
+			img {
+				margin-top: 15%;
+				margin-bottom: -15%;
+				right: 0;
+			}
+			// display: none;
 		}
 	}
 	.sub-sections {
@@ -227,7 +236,10 @@ body {
 
 	#main {
 		._section2 {
-			display: none;
+			justify-content: center;
+			img {
+				margin-top: 30%;
+			}
 		}
 		#main-label {
 			font-size: 30px;
