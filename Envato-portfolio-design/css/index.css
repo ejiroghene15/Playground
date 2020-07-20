@@ -343,6 +343,18 @@ body .hr {
   margin: 6% 0 2%;
 }
 
+#pf-footer .footer-underlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #pf-footer .footer-underlay h1 {
   font-weight: 900;
   font-size: 4em;
@@ -374,14 +386,13 @@ body .hr {
   color: #af112e !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   #main-wrapper > section {
     display: none;
   }
   .pf-icons {
-    display: none !important;
     position: absolute !important;
-    right: 10px;
+    right: 80px;
     bottom: 100px;
   }
   .pf-labels {
@@ -417,14 +428,12 @@ body .hr {
   }
   #pf-hero {
     display: block !important;
-    background-image: url(../imgs/img1.png);
-    background-size: 100% 100%;
-    background-position: center -15vh;
+    background-image: url(../imgs/img1.png), url(../imgs/rect.png);
+    background-size: 90% 120%;
+    background-position: center -5vh, left 20vh;
     background-repeat: no-repeat;
-    position: absolute;
-    height: 100%;
+    height: 650px;
     width: 100%;
-    top: 0;
   }
   #pf-hero::before {
     position: absolute;
@@ -444,21 +453,99 @@ body .hr {
     display: none;
   }
   #pf-hero #hero-text {
-    margin: -25% 7% 0;
+    margin: 0% 5% 0;
     padding: 0em !important;
     color: #ffffff;
-  }
-  #pf-hero #hero-text > h1:first-of-type {
-    font-size: 1.5em;
   }
   #pf-hero #hero-text > #dummy-name {
     font-size: 2em;
   }
   #pf-hero #hero-text > p {
     line-height: 1.5em;
-    font-size: 1.2em;
+    width: 80%;
   }
   #pf-about {
     display: block !important;
+  }
+  #pf-about .userinfo {
+    margin: 0 15px !important;
+  }
+  #pf-about .userinfo > h4 {
+    font-size: 1.2em;
+  }
+  #pf-about .r1 #johndoe {
+    margin: -9% auto 5%;
+    border: 5px solid #af112e;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    display: block;
+    overflow: hidden;
+    background-color: black;
+  }
+  #pf-about .r1 #johndoe img {
+    height: auto !important;
+    display: block;
+    position: relative;
+    left: 5px;
+  }
+  #pf-about .r1 #johndoe::after {
+    display: none;
+  }
+  #pf-about ._card > p {
+    font-size: 25px;
+  }
+  #pf-contact {
+    display: block !important;
+  }
+  #pf-footer {
+    display: block !important;
+  }
+  #pf-footer .footer-underlay h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .pf-labels > h1:nth-child(1) {
+    font-size: 5em;
+  }
+  body .pf-labels > h1:nth-child(2) {
+    font-size: 2em;
+  }
+  #pf-about .r1 {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+    text-align: center;
+  }
+  #pf-about ._cc {
+    margin-bottom: 7%;
+  }
+  #pf-about ._card > p {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #pf-contact #form {
+    margin: 0 !important;
+  }
+  #pf-footer .footer-underlay {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #pf-hero #hero-text > p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    width: 100%;
+  }
+  #pf-about #timeline .label.lg {
+    width: auto;
+  }
+  #pf-footer .footer-underlay h1 {
+    display: none;
   }
 }

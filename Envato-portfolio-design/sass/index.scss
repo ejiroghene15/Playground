@@ -300,6 +300,9 @@ body {
 #pf-footer {
 	margin: 6% 0 2%;
 	.footer-underlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		h1 {
 			font-weight: 900;
 			font-size: 4em;
@@ -327,16 +330,16 @@ body {
 	}
 }
 
-@include mq(768px) {
+@include mq(1280px) {
 	#main-wrapper {
 		> section {
 			display: none;
 		}
 	}
 	.pf-icons {
-		display: none !important;
+		// display: none !important;
 		position: absolute !important;
-		right: 10px;
+		right: 80px;
 		bottom: 100px;
 	}
 
@@ -368,14 +371,12 @@ body {
 
 	#pf-hero {
 		display: block !important;
-		background-image: url(../imgs/img1.png);
-		background-size: 100% 100%;
-		background-position: center -15vh;
+		background-image: url(../imgs/img1.png), url(../imgs/rect.png);
+		background-size: 90% 120%;
+		background-position: center -5vh, left 20vh;
 		background-repeat: no-repeat;
-		position: absolute;
-		height: 100%;
+		height: 650px;
 		width: 100%;
-		top: 0;
 
 		&::before {
 			position: absolute;
@@ -397,23 +398,135 @@ body {
 		}
 
 		#hero-text {
-			margin: -25% 7% 0;
+			margin: 0% 5% 0;
 			padding: 0em !important;
 			color: $p-white;
-			> h1:first-of-type {
-				font-size: 1.5em;
-			}
 			> #dummy-name {
 				font-size: 2em;
 			}
 			> p {
 				line-height: 1.5em;
-				font-size: 1.2em;
+				width: 80%;
 			}
 		}
 	}
 
 	#pf-about {
 		display: block !important;
+		.userinfo {
+			margin: 0 15px !important;
+			> h4 {
+				font-size: 1.2em;
+			}
+		}
+		.r1 {
+			// flex-direction: column-reverse !important;
+			// display: none !important;
+			#johndoe {
+				margin: -9% auto 5%;
+				border: 5px solid $p-red;
+				border-radius: 50%;
+				height: 300px;
+				width: 300px;
+				display: block;
+				overflow: hidden;
+				background-color: black;
+				img {
+					height: auto !important;
+					display: block;
+					position: relative;
+					left: 5px;
+				}
+				&::after {
+					display: none;
+				}
+			}
+		}
+		._card > p {
+			font-size: 25px;
+		}
+	}
+
+	#pf-contact {
+		display: block !important;
+	}
+
+	#pf-footer {
+		display: block !important;
+		.footer-underlay {
+			h1 {
+				font-size: 3em;
+			}
+		}
+	}
+}
+
+@include mq(768px) {
+	body {
+		.pf-labels {
+			> h1 {
+				&:nth-child(1) {
+					font-size: 5em;
+				}
+				&:nth-child(2) {
+					font-size: 2em;
+				}
+			}
+		}
+	}
+
+	#pf-about {
+		.r1 {
+			flex-direction: column-reverse !important;
+			text-align: center;
+		}
+		._cc {
+			margin-bottom: 7%;
+		}
+		._card > p {
+			justify-content: start;
+		}
+	}
+
+	#pf-contact {
+		#form {
+			margin: 0 !important;
+		}
+	}
+
+	#pf-footer {
+		.footer-underlay {
+			margin-top: 20%;
+		}
+	}
+}
+
+@include mq(520px) {
+	#pf-hero {
+		#hero-text {
+			> p {
+				line-height: 1.5em;
+				font-size: 1.2em;
+				width: 100%;
+			}
+		}
+	}
+
+	#pf-about {
+		#timeline {
+			.label {
+				&.lg {
+					width: auto;
+				}
+			}
+		}
+	}
+
+	#pf-footer {
+		.footer-underlay {
+			h1 {
+				display: none;
+			}
+		}
 	}
 }
