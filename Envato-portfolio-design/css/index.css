@@ -587,4 +587,7 @@ body .hr {
   #pf-footer .footer-underlay h1 {
     display: none;
   }
+  #pf-footer #pf-footer .footer-text {
+    font-size: 1em;
+  }
 }
