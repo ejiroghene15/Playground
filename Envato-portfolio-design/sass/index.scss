@@ -264,7 +264,7 @@ body {
 #pf-contact {
 	._contact {
 		display: flex;
-		justify-content: space-between;;
+		justify-content: space-between;
 		> div {
 			width: 50%;
 		}
@@ -334,6 +334,9 @@ body {
 					color: $p-red !important;
 				}
 			}
+		}
+		h6 {
+			line-height: 2em;
 		}
 	}
 }
@@ -548,10 +551,9 @@ body {
 	#pf-contact {
 		._contact {
 			h3 {
-				font-size: 1.2em
+				font-size: 1.2em;
 			}
 		}
-
 	}
 
 	#pf-footer {

@@ -403,6 +403,10 @@ body .hr {
   color: #af112e !important;
 }
 
+#pf-footer .footer-text h6 {
+  line-height: 2em;
+}
+
 @media screen and (max-width: 1280px) {
   #main-wrapper > section {
     display: none;
