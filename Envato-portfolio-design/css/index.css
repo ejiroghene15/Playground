@@ -577,6 +577,9 @@ body .hr {
   #pf-about #timeline .label.lg {
     width: auto;
   }
+  #pf-contact ._contact h3 {
+    font-size: 1.2em;
+  }
   #pf-footer .footer-underlay h1 {
     display: none;
   }
