@@ -408,9 +408,6 @@ body .hr {
 }
 
 @media screen and (max-width: 1280px) {
-  #main-wrapper > section {
-    display: none;
-  }
   .pf-icons {
     position: absolute !important;
     right: 80px;
@@ -448,7 +445,6 @@ body .hr {
     color: #ffffff;
   }
   #pf-hero {
-    display: block !important;
     background-image: url(../imgs/img1.png), url(../imgs/rect.png);
     background-size: 90% 120%;
     background-position: center -5vh, left 20vh;
@@ -485,9 +481,6 @@ body .hr {
     line-height: 1.5em;
     width: 80%;
   }
-  #pf-about {
-    display: block !important;
-  }
   #pf-about .userinfo {
     margin: 0 15px !important;
   }
@@ -516,23 +509,70 @@ body .hr {
   #pf-about ._card > p {
     font-size: 25px;
   }
-  #pf-contact {
-    display: block !important;
+  #pf-portfolio #outerbound::before {
+    display: none;
   }
-  #pf-footer {
-    display: block !important;
+  #pf-portfolio #outerbound img {
+    display: block;
+    max-height: 100% !important;
+    max-width: 100% !important;
+  }
+  #pf-portfolio #outerbound .pfimg-1 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 1em;
+  }
+  #pf-portfolio #outerbound .pfimg-1 > section:first-of-type {
+    margin-right: 10%;
+  }
+  #pf-portfolio #secondbound::before {
+    margin: 0 auto;
+    width: 79%;
+    bottom: 26%;
+    height: 60%;
+    left: 12%;
+    border-right: none;
+  }
+  #pf-portfolio #thirdbound {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #pf-portfolio #thirdbound::before {
+    margin: auto;
+    width: 79%;
+    height: 50%;
+    right: 0;
+    bottom: 55px;
+    left: -100%;
   }
   #pf-footer .footer-underlay h1 {
     font-size: 3em;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   body .pf-labels > h1:nth-child(1) {
     font-size: 5em;
   }
   body .pf-labels > h1:nth-child(2) {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .pf-labels > h1:nth-child(1) {
+    font-size: 55px;
+  }
+  body .pf-labels > h1:nth-child(2) {
+    font-size: 25px;
   }
   #pf-hero {
     background-size: 110% 120%;
@@ -551,6 +591,22 @@ body .hr {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+  }
+  #pf-portfolio #secondbound::before {
+    margin: 0 auto;
+    width: 79%;
+    bottom: 26%;
+    height: 60%;
+    left: 15%;
+    border-right: none;
+  }
+  #pf-portfolio #thirdbound::before {
+    margin: auto;
+    width: 79%;
+    height: 100%;
+    right: 0;
+    bottom: 40%;
+    left: -120%;
   }
   #pf-contact ._contact {
     display: block;

@@ -342,11 +342,6 @@ body {
 }
 
 @include mq(1280px) {
-	#main-wrapper {
-		> section {
-			display: none;
-		}
-	}
 	.pf-icons {
 		// display: none !important;
 		position: absolute !important;
@@ -381,7 +376,6 @@ body {
 	}
 
 	#pf-hero {
-		display: block !important;
 		background-image: url(../imgs/img1.png), url(../imgs/rect.png);
 		background-size: 90% 120%;
 		background-position: center -5vh, left 20vh;
@@ -423,7 +417,6 @@ body {
 	}
 
 	#pf-about {
-		display: block !important;
 		.userinfo {
 			margin: 0 15px !important;
 			> h4 {
@@ -458,12 +451,51 @@ body {
 		}
 	}
 
-	#pf-contact {
-		display: block !important;
+	#pf-portfolio {
+		#outerbound {
+			&::before {
+				display: none;
+			}
+			img {
+				display: block;
+				max-height: 100% !important;
+				max-width: 100% !important;
+			}
+			.pfimg-1 {
+				order: 2;
+				margin-top: 1em;
+				> section:first-of-type {
+					margin-right: 10%;
+				}
+			}
+		}
+		#secondbound {
+			&::before {
+				margin: 0 auto;
+				width: 79%;
+				bottom: 26%;
+				height: 60%;
+				left: 12%;
+				border-right: none;
+			}
+		}
+		#thirdbound {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&::before {
+				margin: auto;
+				width: 79%;
+				height: 50%;
+				right: 0;
+				bottom: 55px;
+				left: -100%;
+				// border-right: none;
+			}
+		}
 	}
 
 	#pf-footer {
-		display: block !important;
 		.footer-underlay {
 			h1 {
 				font-size: 3em;
@@ -472,7 +504,7 @@ body {
 	}
 }
 
-@include mq(768px) {
+@include mq(991px) {
 	body {
 		.pf-labels {
 			> h1 {
@@ -485,7 +517,21 @@ body {
 			}
 		}
 	}
+}
 
+@include mq(768px) {
+	body {
+		.pf-labels {
+			> h1 {
+				&:nth-child(1) {
+					font-size: 55px;
+				}
+				&:nth-child(2) {
+					font-size: 25px;
+				}
+			}
+		}
+	}
 	#pf-hero {
 		background-size: 110% 120%;
 	}
@@ -500,6 +546,31 @@ body {
 		}
 		._card > p {
 			justify-content: start;
+		}
+	}
+
+	#pf-portfolio {
+		#secondbound {
+			&::before {
+				margin: 0 auto;
+				width: 79%;
+				bottom: 26%;
+				height: 60%;
+				left: 15%;
+				border-right: none;
+				// border-bottom: none;
+			}
+		}
+		#thirdbound {
+			&::before {
+				margin: auto;
+				width: 79%;
+				height: 100%;
+				right: 0;
+				bottom: 40%;
+				left: -120%;
+			}
+			
 		}
 	}
 
