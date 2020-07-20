@@ -262,6 +262,13 @@ body {
 }
 
 #pf-contact {
+	._contact {
+		display: flex;
+		justify-content: space-between;;
+		> div {
+			width: 50%;
+		}
+	}
 	margin-top: 6em;
 	.socials {
 		position: relative;
@@ -283,6 +290,7 @@ body {
 		}
 	}
 	#form {
+		width: 40%;
 		.form-control {
 			border-radius: 40px;
 			background-color: $p-gray;
@@ -475,6 +483,10 @@ body {
 		}
 	}
 
+	#pf-hero {
+		background-size: 110% 120%;
+	}
+
 	#pf-about {
 		.r1 {
 			flex-direction: column-reverse !important;
@@ -489,7 +501,14 @@ body {
 	}
 
 	#pf-contact {
+		._contact {
+			display: block;
+			> div {
+				width: 100%;
+			}
+		}
 		#form {
+			width: 100%;
 			margin: 0 !important;
 		}
 	}
@@ -503,6 +522,10 @@ body {
 
 @include mq(520px) {
 	#pf-hero {
+		background-size: 110% 120%;
+		background-position: center 3vh, left 20vh;
+		height: 600px;
+
 		#hero-text {
 			> p {
 				line-height: 1.5em;

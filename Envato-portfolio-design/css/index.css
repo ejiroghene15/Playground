@@ -296,6 +296,19 @@ body .hr {
   margin-top: 6em;
 }
 
+#pf-contact ._contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#pf-contact ._contact > div {
+  width: 50%;
+}
+
 #pf-contact .socials {
   position: relative;
 }
@@ -323,6 +336,10 @@ body .hr {
 
 #pf-contact .socials .nav-con:hover {
   background-color: #af112e;
+}
+
+#pf-contact #form {
+  width: 40%;
 }
 
 #pf-contact #form .form-control {
@@ -513,6 +530,9 @@ body .hr {
   body .pf-labels > h1:nth-child(2) {
     font-size: 2em;
   }
+  #pf-hero {
+    background-size: 110% 120%;
+  }
   #pf-about .r1 {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: reverse !important;
@@ -528,7 +548,14 @@ body .hr {
         -ms-flex-pack: start;
             justify-content: start;
   }
+  #pf-contact ._contact {
+    display: block;
+  }
+  #pf-contact ._contact > div {
+    width: 100%;
+  }
   #pf-contact #form {
+    width: 100%;
     margin: 0 !important;
   }
   #pf-footer .footer-underlay {
@@ -537,6 +564,11 @@ body .hr {
 }
 
 @media screen and (max-width: 520px) {
+  #pf-hero {
+    background-size: 110% 120%;
+    background-position: center 3vh, left 20vh;
+    height: 600px;
+  }
   #pf-hero #hero-text > p {
     line-height: 1.5em;
     font-size: 1.2em;
