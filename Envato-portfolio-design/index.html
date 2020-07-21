@@ -10,14 +10,47 @@
 			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="./css/index.css" />
 		<link rel="stylesheet" href="./css/takefive_min.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
 	<body>
 		<main id="main-wrapper">
+			<button
+				class="btn position-fixed d-inline-block mt-4 mx-4 hamburger text-light"
+				type="button"
+			>
+				<i class="fa fa-bars"></i>
+			</button>
 
-
+			<div class="pf-icons-con mr-n5 ml-auto">
+				<nav
+					class="pf-icons d-flex flex-column justify-content-between"
+					id="menu_nav"
+				>
+					<div class="nav-con active">
+						<img src="./imgs/home.png" alt="" />
+					</div>
+					<div class="nav-con">
+						<a href="#pf-about"><img src="./imgs/about.png" alt="" /></a>
+					</div>
+					<div class="nav-con">
+						<a href="#pf-portfolio"
+							><img src="./imgs/portfolio.png" alt=""
+						/></a>
+					</div>
+					<div class="nav-con">
+						<a href="#pf-contact"><img src="./imgs/contact.png" alt="" /></a>
+					</div>
+				</nav>
+			</div>
+			
 			<section
 				id="pf-hero"
 				data-aos="zoom-out"
@@ -46,30 +79,12 @@
 								<button class="pbtn btn-normal btn-rounded text-light mr-4">
 									MORE ABOUT ME
 								</button>
-								<button class="pbtn btn-alt btn-rounded text-light d-lg-block d-md-block d-none">
+								<button
+									class="pbtn btn-alt btn-rounded text-light d-lg-block d-md-block d-none"
+								>
 									PORTFOLIO
 								</button>
 							</div>
-							<nav
-								class="pf-icons ml-auto d-flex flex-column justify-content-between mr-n5"
-							>
-								<div class="nav-con active">
-									<img src="./imgs/home.png" alt="" />
-								</div>
-								<div class="nav-con">
-									<a href="#pf-about"><img src="./imgs/about.png" alt="" /></a>
-								</div>
-								<div class="nav-con">
-									<a href="#pf-portfolio"
-										><img src="./imgs/portfolio.png" alt=""
-									/></a>
-								</div>
-								<div class="nav-con">
-									<a href="#pf-contact"
-										><img src="./imgs/contact.png" alt=""
-									/></a>
-								</div>
-							</nav>
 						</div>
 					</section>
 				</div>
@@ -349,27 +364,19 @@
 								<div class="d-flex flex-wrap" id="secondbound">
 									<div
 										class="d-flex w-100 mb-5 justify-content-between px-3 pfimg-1"
-										data-aos="slide-down"
-										data-aos-delay="0"
-										data-aos-easing="ease-in-out"
 									>
 										<section>
 											<a href="#portfolio-1">
 												<img src="./imgs/pineapple.png" alt="" />
 											</a>
 										</section>
-										<section >
+										<section>
 											<a href="#portfolio-2">
 												<img src="./imgs/graffiti.png" alt="" />
 											</a>
 										</section>
 									</div>
-									<section
-										class="text-center"
-										data-aos="slide-up"
-										data-aos-delay="500"
-										data-aos-easing="ease-in-out"
-									>
+									<section class="text-center">
 										<a href="#portfolio-3">
 											<img src="./imgs/graffiti2.png" alt="" />
 										</a>
@@ -377,11 +384,7 @@
 								</div>
 							</div>
 							<div class="col-md-4 mt-n4" id="thirdbound">
-								<section
-									data-aos="slide-left"
-									data-aos-delay="0"
-									data-aos-easing="ease-in-out"
-								>
+								<section>
 									<a href="#portfolio-4">
 										<img src="./imgs/hand.png" class="w-100 h-100" alt="" />
 									</a>
@@ -402,7 +405,7 @@
 				</div>
 				<div class="container">
 					<div class="_contact">
-						<div class="mb-5 ">
+						<div class="mb-5">
 							<!-- one -->
 							<div class="text-light pb-4">
 								<h3 class="mb-4">I’M WAITING TO HEAR FROM YOU !</h3>
@@ -601,8 +604,8 @@
 		</main>
 
 		<script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 			crossorigin="anonymous"
 		></script>
 		<script
@@ -638,6 +641,13 @@
 				once: true, // whether animation should happen only once - while scrolling down
 				mirror: false, // whether elements should animate out while scrolling past them
 				anchorPlacement: "center-center", // defines which position of the element regarding to window should trigger the animation
+			});
+		</script>
+		<script>
+			$(function () {
+				$(".hamburger").click(function () {
+					$(".pf-icons-con").fadeToggle();
+				});
 			});
 		</script>
 	</body>

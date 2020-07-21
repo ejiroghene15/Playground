@@ -11,7 +11,20 @@ body {
   background-color: #041119;
 }
 
-body .pf-icons {
+body .hamburger {
+  background-color: #af112e !important;
+  z-index: 4;
+  display: none;
+  right: 10px;
+}
+
+body .hamburger:active, body .hamburger:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .pf-icons-con {
+  z-index: 4;
   position: relative;
 }
 
@@ -409,8 +422,9 @@ body .hr {
 
 @media screen and (max-width: 1280px) {
   .pf-icons {
-    position: absolute !important;
-    right: 80px;
+    position: fixed !important;
+    right: 10px;
+    margin-right: 20px;
     bottom: 100px;
   }
   .pf-labels {
@@ -568,6 +582,15 @@ body .hr {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  body .hamburger {
+    display: block;
+  }
+  body .pf-icons-con {
+    display: none;
+  }
   body .pf-labels > h1:nth-child(1) {
     font-size: 55px;
   }

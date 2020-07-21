@@ -22,8 +22,24 @@ body {
 	overflow-y: scroll;
 	background-color: $p-bb;
 
-	.pf-icons {
+	.hamburger {
+		background-color: $p-red !important;
+		z-index: 4;
+		display: none;
+		right: 10px;
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	.pf-icons-con {
+		z-index: 4;
 		position: relative;
+	}
+
+	.pf-icons {
 		.nav-con {
 			display: flex;
 			justify-content: center;
@@ -343,9 +359,9 @@ body {
 
 @include mq(1280px) {
 	.pf-icons {
-		// display: none !important;
-		position: absolute !important;
-		right: 80px;
+		position: fixed !important;
+		right: 10px;
+		margin-right: 20px;
 		bottom: 100px;
 	}
 
@@ -520,7 +536,19 @@ body {
 }
 
 @include mq(768px) {
+	html {
+		overflow-x: hidden;
+	}
+
 	body {
+		.hamburger {
+			display: block;
+		}
+
+		.pf-icons-con {
+			display: none;
+		}
+
 		.pf-labels {
 			> h1 {
 				&:nth-child(1) {
