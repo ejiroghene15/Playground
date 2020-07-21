@@ -13,13 +13,13 @@ $p-white: #ffffff;
 
 html {
 	scroll-behavior: smooth;
+	overflow-y: scroll;
 }
 
 body {
 	margin: 0;
 	font-family: "Roboto", sans-serif;
 	overflow: hidden;
-	overflow-y: scroll;
 	background-color: $p-bb;
 
 	.hamburger {
@@ -27,6 +27,7 @@ body {
 		z-index: 4;
 		display: none;
 		right: 10px;
+		position: fixed;
 
 		&:active,
 		&:focus {
@@ -40,6 +41,11 @@ body {
 	}
 
 	.pf-icons {
+		position: fixed !important;
+		right: 10px;
+		margin-right: 20px;
+		bottom: 100px;
+
 		.nav-con {
 			display: flex;
 			justify-content: center;
@@ -358,13 +364,6 @@ body {
 }
 
 @include mq(1280px) {
-	.pf-icons {
-		position: fixed !important;
-		right: 10px;
-		margin-right: 20px;
-		bottom: 100px;
-	}
-
 	.pf-labels {
 		text-transform: uppercase;
 		position: relative;
@@ -536,10 +535,6 @@ body {
 }
 
 @include mq(768px) {
-	html {
-		overflow-x: hidden;
-	}
-
 	body {
 		.hamburger {
 			display: block;

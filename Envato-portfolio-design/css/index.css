@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   overflow: hidden;
-  overflow-y: scroll;
   background-color: #041119;
 }
 
@@ -16,6 +16,7 @@ body .hamburger {
   z-index: 4;
   display: none;
   right: 10px;
+  position: fixed;
 }
 
 body .hamburger:active, body .hamburger:focus {
@@ -26,6 +27,13 @@ body .hamburger:active, body .hamburger:focus {
 body .pf-icons-con {
   z-index: 4;
   position: relative;
+}
+
+body .pf-icons {
+  position: fixed !important;
+  right: 10px;
+  margin-right: 20px;
+  bottom: 100px;
 }
 
 body .pf-icons .nav-con {
@@ -421,12 +429,6 @@ body .hr {
 }
 
 @media screen and (max-width: 1280px) {
-  .pf-icons {
-    position: fixed !important;
-    right: 10px;
-    margin-right: 20px;
-    bottom: 100px;
-  }
   .pf-labels {
     text-transform: uppercase;
     position: relative;
@@ -582,9 +584,6 @@ body .hr {
 }
 
 @media screen and (max-width: 768px) {
-  html {
-    overflow-x: hidden;
-  }
   body .hamburger {
     display: block;
   }
