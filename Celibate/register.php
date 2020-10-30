@@ -1,15 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-define("HOST", "localhost");
-define("DB_USER", "id14347489_root");
-define("DB_PASSWORD", "-!M96PQ=lv9zJ@bL");
-define("DATABASE", "id14347489_celibate");
-
-$sql = new mysqli(HOST, DB_USER, DB_PASSWORD, DATABASE);
-if ($sql->connect_errno) {
-	echo "Could not connect to database";
-}
-
+require 'db.php';
+$sql = $conn;
 function validateInput($input)
 {
 	global $sql;
