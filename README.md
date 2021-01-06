@@ -51,4 +51,4 @@ HTML CSS(Bootstrap, SCSS) JavaScript(Jquery) (APIs).
 **Technologies used** <br>
 HTML CSS(Bootstrap, SCSS) JavaScript(Jquery) (APIs).
 
-### [View Project](https://ejiroghene15.github.io/Playground/Greamit/frontend/)
+### [View Project](https://ejiroghene15.github.io/Playground/Greamit/)
