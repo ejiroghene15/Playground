@@ -1,0 +1,22 @@
+.page-item.active .page-link {
+  background-color: var(--primary-color) !important;
+  border: var(--primary-color) !important;
+  color: #fff;
+}
+
+.table-responsive .row {
+  margin: auto !important;
+}
+
+.sorting::before, .sorting::after,
+.sorting_asc::before,
+.sorting_asc::after,
+.sorting_desc::before,
+.sorting_desc::after {
+  display: none !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}

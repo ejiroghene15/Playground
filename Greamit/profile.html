@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Greamit</title>
+        <link
+            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/datatables.min.css" />
+        <link rel="stylesheet" href="./css/custom.css" />
+        <link rel="stylesheet" href="./css/custom-datatable.css" />
+    </head>
+
+    <body>
+        <main id="wrapper">
+            <!-- sidebar -->
+            <aside id="sidebar">
+                <nav id="content-nav">
+                    <div id="logo">
+                        <img
+                            src="./assets/imgs/logo-lg.svg"
+                            class="logo-lg"
+                            alt=""
+                        />
+                        <img
+                            src="./assets/imgs/logo-sm.png"
+                            class="logo-sm"
+                            alt=""
+                            width="25"
+                        />
+                        <span id="hamburger"><i class="bx bx-menu"></i></span>
+                    </div>
+
+                    <section id="nav-widget">
+                        <form method="POST">
+                            <input
+                                type="search"
+                                placeholder="Search"
+                                id="search-bar"
+                            />
+                        </form>
+                        <div id="nav-notifications" class="d-sm-block d-none">
+                            <span class="notification-wrapper active">
+                                <i class="bx bx-envelope"></i>
+                            </span>
+                            <span class="notification-wrapper active">
+                                <i class="bx bx-bell"></i>
+                            </span>
+                        </div>
+                        <div id="nav-userprofile">
+                            <img
+                                src="./assets/imgs/timi-avatar.png"
+                                alt=""
+                                class="avatar"
+                            />
+                            <h4 id="username" class="d-sm-block d-none">
+                                <span>Temak Timi</span> <br />
+                                <small>Admin</small>
+                            </h4>
+                        </div>
+                    </section>
+                </nav>
+                <ul id="menu-list">
+                    <li>
+                        <a href="./index.html">
+                            <span class="menu-icon">
+                                <i class="bx bxs-dashboard"></i>
+                                <img
+                                    src="./assets/icons/dashboard.svg"
+                                    alt=""
+                                />
+                            </span>
+                            <span class="menu-label"> Dashboard </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./greams.html">
+                            <span class="menu-icon">
+                                <i class="bx bx-link"></i>
+                                <img src="./assets/icons/greams.svg" alt="" />
+                            </span>
+                            <span class="menu-label">Greams</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./users.html">
+                            <span class="menu-icon">
+                                <i class="bx bx-user-circle"></i>
+                                <img src="./assets/icons/users.svg" alt="" />
+                            </span>
+                            <span class="menu-label">User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="menu-icon">
+                                <i class="bx bxs-megaphone"></i>
+                                <img src="./assets/icons/campaign.svg" alt="" />
+                            </span>
+                            <span class="menu-label">Campaigns</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./security.html">
+                            <span class="menu-icon">
+                                <i class="bx bx-check-shield"></i>
+                                <img src="./assets/icons/security.svg" alt="" />
+                            </span>
+                            <span class="menu-label">Security</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="./profile.html">
+                            <span class="menu-icon">
+                                <i class="bx bx-cog"></i>
+                                <img src="./assets/icons/settings.svg" alt="" />
+                            </span>
+                            <span class="menu-label">Settings</span>
+                        </a>
+                    </li>
+                    <li class="mt-5 logout" style="color: var(--primary-color)">
+                        <a href="#">
+                            <span class="menu-icon">
+                                <i class="bx bx-log-in"></i>
+                                <img src="./assets/icons/log-out.svg" alt="" />
+                            </span>
+                            <span class="menu-label">Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- main content -->
+            <div id="content">
+                <div id="content-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="card border-0 shadow-sm">
+                                <div
+                                    class="card-header"
+                                    style="background-color: #fff"
+                                >
+                                    <h5 class="m-0 font-weight-bold p-1">
+                                        Personal Details
+                                    </h5>
+                                </div>
+
+                                <div
+                                    class="card-body p-4 d-flex justify-content-between"
+                                >
+                                    <div>
+                                        <img
+                                            src="./assets/imgs/timi-avatar.png"
+                                            height="150"
+                                            width="150"
+                                            class="rounded-circle img-fluid"
+                                        />
+                                    </div>
+                                    <div class="w-100 ml-4">
+                                        <div class="form-row mb-3">
+                                            <div class="col-sm-5">
+                                                Full Name
+                                            </div>
+                                            <div class="col-sm-5 px-0">
+                                                <b>Temak Timi</b>
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-3">
+                                            <div class="col-sm-5">
+                                                Email Address
+                                            </div>
+                                            <div class="col-sm-5 px-0">
+                                                <b>temaktimi@gmail.com</b>
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-3">
+                                            <div class="col-sm-5">
+                                                Phone Number
+                                            </div>
+                                            <div class="col-sm-5 px-0">
+                                                <b>+2347012998989</b>
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-3">
+                                            <div class="col-sm-5">
+                                                Resident Address
+                                            </div>
+                                            <div class="col-sm-5 px-0">
+                                                <b>Lagos, Nigeria</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6
+                                        class="text-capitalize font-weight-bold mb-4"
+                                        style="font-size: 1.1em"
+                                    >
+                                        <span>Edit personal information</span>
+                                    </h6>
+
+                                    <form method="post">
+                                        <div class="form-group mb-4">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Full Name"
+                                            />
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                placeholder="Email Address"
+                                            />
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-4">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Phone Number"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-4">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Postal code"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-4">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="City"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <select
+                                                        name=""
+                                                        class="form-control"
+                                                    >
+                                                        <option value="nigeria">
+                                                            Nigeria
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button
+                                                class="btn btn-lg w-50 font-weight-bold form-button"
+                                            >
+                                                Save Changes
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 mt-5 mt-lg-0 mt-md-0">
+                            <div class="card border-0 shadow-sm">
+                                <div
+                                    class="card-header"
+                                    style="background-color: #fff"
+                                >
+                                    <h5 class="m-0 font-weight-bold p-1">
+                                        <span>Security</span>
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <form method="post">
+                                        <div class="form-group mb-4">
+                                            <div class="input-group">
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    placeholder="Old password"
+                                                />
+                                                <div
+                                                    class="input-group-append"
+                                                    for="toggle-password"
+                                                >
+                                                    <span
+                                                        class="input-group-text bg-transparent"
+                                                        ><i
+                                                            class="bx bx-show"
+                                                        ></i
+                                                    ></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <div class="input-group">
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    placeholder="New password"
+                                                />
+                                                <div
+                                                    class="input-group-append"
+                                                    for="toggle-password"
+                                                >
+                                                    <span
+                                                        class="input-group-text bg-transparent"
+                                                        ><i
+                                                            class="bx bx-show"
+                                                        ></i
+                                                    ></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <div class="input-group">
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    placeholder="Confirm new password"
+                                                />
+                                                <div
+                                                    class="input-group-append"
+                                                    for="toggle-password"
+                                                >
+                                                    <span
+                                                        class="input-group-text bg-transparent"
+                                                        ><i
+                                                            class="bx bx-show"
+                                                        ></i
+                                                    ></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button
+                                                class="btn btn-lg w-50 font-weight-bold form-button"
+                                            >
+                                                Change password
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-sm mt-4">
+                                <div
+                                    class="card-header"
+                                    style="background-color: #fff"
+                                >
+                                    <h5 class="m-0 font-weight-bold p-1">
+                                        Notification
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div
+                                            class="d-flex justify-content-between mb-4"
+                                        >
+                                            <label class="pr-3">
+                                                Notification for Admin
+                                                Login</label
+                                            >
+                                            <label class="switch">
+                                                <input
+                                                    type="checkbox"
+                                                    checked
+                                                />
+                                                <span
+                                                    class="slider round"
+                                                ></span>
+                                            </label>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between mb-4"
+                                        >
+                                            <label class="pr-3">
+                                                Notification for User
+                                                Reports</label
+                                            >
+                                            <label class="switch">
+                                                <input
+                                                    type="checkbox"
+                                                    checked
+                                                />
+                                                <span
+                                                    class="slider round"
+                                                ></span>
+                                            </label>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between mb-4"
+                                        >
+                                            <label class="pr-3">
+                                                Notification for Malicious
+                                                Threat Alert</label
+                                            >
+                                            <label class="switch">
+                                                <input
+                                                    type="checkbox"
+                                                    checked
+                                                />
+                                                <span
+                                                    class="slider round"
+                                                ></span>
+                                            </label>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between mb-4"
+                                        >
+                                            <label class="pr-3">
+                                                Notification for Engagement
+                                                Report</label
+                                            >
+                                            <label class="switch">
+                                                <input
+                                                    type="checkbox"
+                                                    checked
+                                                />
+                                                <span
+                                                    class="slider round"
+                                                ></span>
+                                            </label>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between"
+                                        >
+                                            <label class="pr-3">
+                                                New User Sign up</label
+                                            >
+                                            <label class="switch">
+                                                <input type="checkbox" />
+                                                <span
+                                                    class="slider round"
+                                                ></span>
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="text-dark mt-5 text-right">
+                    <p style="font-size: 14px">
+                        <b>Copyright 2020 Greamit All right reserved</b>
+                    </p>
+                </footer>
+            </div>
+        </main>
+
+        <script src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/datatables.min.js"></script>
+        <script src="./js/custom.js"></script>
+    </body>
+</html>
