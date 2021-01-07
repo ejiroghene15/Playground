@@ -29,6 +29,14 @@
 						<span id="hamburger"><i class="bx bx-menu"></i></span>
 					</div>
 
+					<section id="nav-menu" class="d-md-block">
+						<ul class="nav" role="tablist">
+							<li>
+								<a class="active">Overview</a>
+							</li>
+						</ul>
+					</section>
+					
 					<section id="nav-widget">
 						<form method="POST">
 							<input type="search" placeholder="Search" id="search-bar" />
@@ -128,7 +136,7 @@
 							<div class="clearfix"></div>
 							<div class="info-bar primary"></div>
 							<p>Total Greams</p>
-                        </section>
+						</section>
 
 						<section>
 							<div class="info-count">
@@ -145,7 +153,7 @@
 							<div class="clearfix"></div>
 							<div class="info-bar blue"></div>
 							<p>Total User</p>
-                        </section>
+						</section>
 
 						<section>
 							<div class="info-count">
@@ -154,15 +162,15 @@
 									<img src="./assets/icons/like.svg" alt="" />
 								</span>
 								<h1 class="number">4,507</h1>
-                            </div>
-                            <p class="float-right pt-0">
+							</div>
+							<p class="float-right pt-0">
 								<img src="./assets/icons/arrow-down.svg" alt="" />
 								<span class="font-weight-bold">8.99%</span>
-                            </p>
-                            <div class="clearfix"></div>
+							</p>
+							<div class="clearfix"></div>
 							<div class="info-bar warning"></div>
 							<p>Active Campaigns</p>
-                        </section>
+						</section>
 
 						<section>
 							<div class="info-count">
@@ -171,15 +179,29 @@
 									<img src="./assets/icons/chat.svg" alt="" />
 								</span>
 								<h1 class="number">1,678</h1>
-                            </div>
-                            <p class="float-right pt-0">
+							</div>
+							<p class="float-right pt-0">
 								<img src="./assets/icons/arrow-up.svg" alt="" />
 								<span class="font-weight-bold">16.99%</span>
-                            </p>
-                            <div class="clearfix"></div>
+							</p>
+							<div class="clearfix"></div>
 							<div class="info-bar purple"></div>
 							<p>Total Comments</p>
 						</section>
+					</div>
+
+					<!-- Greams chart -->
+					<div class="row mt-4">
+						<div class="col-lg-12">
+							<div class="card mb-4 graph-container">
+								<div class="card-body">
+									<div class="card-title">
+										<h5 class="font-weight-bold">Greams Engagement</h5>
+									</div>
+									<div id="echartBar" style="height: 300px"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -193,6 +215,7 @@
 
 		<script src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/datatables.min.js"></script>
+		<script src="./js/echarts.min.js"></script>
 		<script src="./js/custom.js"></script>
 	</body>
 </html>
