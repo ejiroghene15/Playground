@@ -690,6 +690,13 @@ body .fs-sm {
           align-items: center;
 }
 
+@media screen and (max-width: 650px) {
+  #content > #content-body .campaigns-tabs > nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 #content > #content-body .campaigns-tabs > nav > span {
   font-weight: bolder;
   font-size: 17px;
@@ -701,6 +708,16 @@ body .fs-sm {
 
 #content > #content-body .campaigns-tabs > nav > span:nth-child(2) {
   margin-left: auto;
+}
+
+@media screen and (max-width: 650px) {
+  #content > #content-body .campaigns-tabs > nav > span:nth-child(2) {
+    margin-left: 0;
+    width: 100% !important;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 #content > #content-body .campaigns-tabs > nav > span:nth-child(2) > a {

@@ -600,6 +600,9 @@ body {
 			border: none !important;
 			> nav {
 				display: flex;
+				@include mq(650px) {
+					flex-wrap: wrap;
+				}
 				align-items: center;
 
 				> span {
@@ -610,6 +613,11 @@ body {
 					}
 					&:nth-child(2) {
 						margin-left: auto;
+						@include mq(650px) {
+							margin-left: 0;
+							width: 100% !important;
+							justify-content: space-evenly;
+						}
 						> a {
 							color: #000;
 							padding: 0.8em 2em;
@@ -647,7 +655,7 @@ body {
 					justify-content: space-between;
 
 					._gradient {
-                        cursor: pointer;
+						cursor: pointer;
 						display: flex;
 						justify-content: center;
 						align-items: center;
