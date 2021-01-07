@@ -618,9 +618,16 @@ body {
 							width: 100% !important;
 							justify-content: space-evenly;
 						}
+						@include mq(470px) {
+							justify-content: space-between;
+						}
 						> a {
 							color: #000;
 							padding: 0.8em 2em;
+							@include mq(470px) {
+								padding: 0.8em;
+								font-size: 15px;
+							}
 							display: inline-block;
 							text-decoration: none !important;
 							&.active {
@@ -728,6 +735,38 @@ body {
 						margin-left: 2em;
 						white-space: nowrap;
 					}
+				}
+			}
+		}
+
+		.campaigns-pagination {
+			box-shadow: 0px 1.94206px 23.3562px -0.875859px rgba(0, 0, 0, 0.05);
+			padding: 1.5em;
+			border-radius: 8px;
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: #bdbdbd;
+
+			.pagination-btns {
+				height: 35px;
+				width: 35px;
+				padding: 15px;
+				margin: 0 3px;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				text-decoration: none !important;
+				&.arrow-icons {
+					font-size: 20px !important;
+					background: #343a400f;
+				}
+				&.active {
+					color: #fff;
+					background-color: var(--primary-color);
 				}
 			}
 		}
