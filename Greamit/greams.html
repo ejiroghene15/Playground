@@ -135,6 +135,88 @@
             <!-- main content -->
             <div id="content">
                 <div id="content-body">
+                    <!-- Modal -->
+                    <div
+                        class="modal fade"
+                        data-backdrop="static"
+                        id="userModal"
+                    >
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div
+                                    class="d-flex justify-content-between px-3 pt-3"
+                                >
+                                    <div class="dropdown">
+                                        <span
+                                            data-toggle="dropdown"
+                                            class="close"
+                                        >
+                                            <i
+                                                class="bx bx-dots-horizontal-rounded"
+                                            ></i>
+                                        </span>
+                                        <div class="dropdown-menu">
+                                            <a
+                                                class="dropdown-item active"
+                                                href="#"
+                                                >Delete Gream</a
+                                            >
+                                            <a class="dropdown-item" href="#"
+                                                >Blacklist Gream</a
+                                            >
+                                            <a class="dropdown-item" href="#"
+                                                >Deactivate Gream</a
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: -50px">
+                                        <img
+                                            src="./assets/imgs/timi-avatar.png"
+                                            alt=""
+                                            height="100"
+                                            width="100"
+                                        />
+                                        <p
+                                            class="font-weight-bold mt-3 mx-0 text-center"
+                                        >
+                                            @temak
+                                        </p>
+                                    </div>
+                                    <span
+                                        type="button"
+                                        class="close m-0 p-0"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        <span aria-hidden="true">&times;</span>
+                                    </span>
+                                </div>
+
+                                <div class="modal-body p-0">
+                                    <p
+                                        class="text-center font-weight-bold"
+                                        style="color: var(--primary-color)"
+                                    >
+                                        https://www.pexels.com/@startup-stock-photos
+                                    </p>
+                                    <p class="text-center">
+                                        <span class="font-weight-bolder"
+                                            >256 Likes</span
+                                        >
+                                        <span
+                                            class="d-inline-block mx-5 font-weight-bolder"
+                                            >56 Comments</span
+                                        >
+                                        <span class="font-weight-bolder"
+                                            >40 Reshares</span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card-grid">
                         <section>
                             <div class="info-count">
@@ -185,44 +267,67 @@
                         </section>
                     </div>
 
-                    <div class="card mt-5">
-                        <div class="card-body">
-                            <section class="table-responsive">
-                                <table
-                                    class="table table-striped table-bordered dt"
-                                >
-                                    <thead>
-                                        <tr>
-                                            <th class="px-2" style="width: 1px">
-                                                <input type="checkbox" class="select-all"/>
-                                            </th>
-                                            <th>Username</th>
-                                            <th>Gream</th>
-                                            <th>Category</th>
-                                            <th>Date Posted</th>
-                                            <th>Likes</th>
-                                            <th>Comments</th>
-                                            <th>Reshares</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th class="px-2">
-                                                <input type="checkbox"/>
-                                            </th>
-                                            <td>Row 1 Data 1</td>
-                                            <td>Row 1 Data 2</td>
-                                            <td>Row 1 Data 2</td>
-                                            <td>Row 1 Data 2</td>
-                                            <td>Row 1 Data 2</td>
-                                            <td>Row 1 Data 2</td>
-                                            <td>Row 1 Data 2</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </section>
+                    <form>
+                        <div class="card mt-5">
+                            <div class="card-body py-2">
+                                <div class="float-right">
+                                    <img
+                                        style="cursor: pointer"
+                                        src="./assets/icons/delete.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <section class="table-responsive">
+                                    <table
+                                        class="table table-striped table-bordered dt"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    class="px-2"
+                                                    style="width: 1px"
+                                                >
+                                                    <input
+                                                        type="checkbox"
+                                                        class="select-all"
+                                                    />
+                                                </th>
+                                                <th>Username</th>
+                                                <th>Gream</th>
+                                                <th>Category</th>
+                                                <th>Date Posted</th>
+                                                <th>Likes</th>
+                                                <th>Comments</th>
+                                                <th>Reshares</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                data-toggle="modal"
+                                                data-target="#userModal"
+                                            >
+                                                <th class="px-2">
+                                                    <input type="checkbox" />
+                                                </th>
+                                                <td>Row 1 Data 1</td>
+                                                <td>Row 1 Data 2</td>
+                                                <td>Row 1 Data 2</td>
+                                                <td>Row 1 Data 2</td>
+                                                <td>Row 1 Data 2</td>
+                                                <td>Row 1 Data 2</td>
+                                                <td>Row 1 Data 2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <footer class="text-dark mt-5 text-right">
@@ -234,6 +339,7 @@
         </main>
 
         <script src="./js/jquery.min.js"></script>
+        <script src="./js/popper.min.js"></script>
         <script type="text/javascript" src="./js/datatables.min.js"></script>
         <script src="./js/custom.js"></script>
     </body>

@@ -36,6 +36,8 @@ body .fs-sm {
   position: fixed;
   bottom: 0;
   z-index: 3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #sidebar.active {
@@ -43,7 +45,7 @@ body .fs-sm {
 }
 
 #sidebar.active .menu-label {
-  display: none;
+  opacity: 0;
 }
 
 #sidebar.active .menu-icon {
@@ -74,6 +76,7 @@ body .fs-sm {
   }
   #sidebar.active .menu-label {
     display: inline-block;
+    opacity: 1;
   }
   #sidebar.active .menu-icon {
     width: 30px !important;
@@ -277,6 +280,9 @@ body .fs-sm {
   color: inherit;
   vertical-align: top;
   text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 #sidebar #menu-list li > a > .menu-icon {
@@ -295,6 +301,8 @@ body .fs-sm {
 }
 
 #sidebar #menu-list li > a > .menu-label {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-size: 1.1em;
   vertical-align: text-top;
 }
@@ -326,10 +334,16 @@ body .fs-sm {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #content.active {
   left: 80px;
+}
+
+#content .pointer-cursor {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -629,7 +643,7 @@ body .fs-sm {
 }
 
 #content > #content-body #security-others ul.nav > li a,
-#content > #content-body #userModal ul.nav > li a {
+#content > #content-body .modal ul.nav > li a {
   cursor: pointer;
   font-weight: bold;
   font-size: 17px;
@@ -639,12 +653,12 @@ body .fs-sm {
 }
 
 #content > #content-body #security-others ul.nav > li a.active,
-#content > #content-body #userModal ul.nav > li a.active {
+#content > #content-body .modal ul.nav > li a.active {
   color: var(--primary-color);
   border-bottom: 3px solid var(--primary-color);
 }
 
-#content > #content-body #userModal .modal-profile-info {
+#content > #content-body .modal .modal-profile-info {
   width: 89%;
   border: 1px solid #e0e0e0;
   -webkit-box-shadow: 0px 1.9420591592788696px 23.356245040893555px -0.8758592009544373px #000000 5%;
@@ -653,11 +667,11 @@ body .fs-sm {
   border-radius: 3px;
 }
 
-#content > #content-body #userModal ul.nav {
+#content > #content-body .modal ul.nav {
   background-color: #fff;
 }
 
-#content > #content-body #userModal ul.nav > li a {
+#content > #content-body .modal ul.nav > li a {
   font-size: 13px;
 }
 
