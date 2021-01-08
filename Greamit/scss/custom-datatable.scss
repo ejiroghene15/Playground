@@ -1,23 +1,26 @@
 // datatables
 .page-item.active .page-link {
-    background-color: var(--primary-color) !important;
-    border: var(--primary-color) !important;
-    color: #fff;
+	background-color: var(--primary-color) !important;
+	border: var(--primary-color) !important;
+	color: #fff;
 }
 
 .table-responsive .row {
-    margin: auto !important;
+	margin: auto !important;
+	& td {
+		cursor: pointer;
+	}
 }
 
 .sorting,
 .sorting_asc,
 .sorting_desc {
-    &::before,
-    &::after {
-        display: none !important;
-    }
+	&::before,
+	&::after {
+		display: none !important;
+	}
 }
 
 div.dataTables_wrapper div.dataTables_filter input {
-    box-shadow: none !important;
+	box-shadow: none !important;
 }

@@ -36,8 +36,8 @@ body .fs-sm {
   position: fixed;
   bottom: 0;
   z-index: 3;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 #sidebar.active {
@@ -271,8 +271,6 @@ body .fs-sm {
   padding: 0.8em 2em;
   font-weight: bold;
   letter-spacing: 0.5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 #sidebar #menu-list li > a {
@@ -301,8 +299,8 @@ body .fs-sm {
 }
 
 #sidebar #menu-list li > a > .menu-label {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   font-size: 1.1em;
   vertical-align: text-top;
 }
@@ -399,6 +397,20 @@ body .fs-sm {
   top: -20px;
 }
 
+@media screen and (max-width: 768px) {
+  #content > #content-body .dropdown-menu.show {
+    left: 0px !important;
+  }
+  #content > #content-body .dropdown-menu.show::before {
+    left: 6px;
+    right: auto;
+  }
+  #content > #content-body .dropdown-menu.show::after {
+    left: 6px;
+    right: auto;
+  }
+}
+
 #content > #content-body .dropdown-item {
   padding: 12px 18px !important;
   display: -ms-grid !important;
@@ -406,11 +418,15 @@ body .fs-sm {
   position: relative;
   font-size: 14px;
   font-weight: bolder;
+  color: black;
+}
+
+#content > #content-body .dropdown-item:focus, #content > #content-body .dropdown-item:hover {
+  background-color: #d2145926;
 }
 
 #content > #content-body .dropdown-item.active {
   background-color: transparent;
-  color: black;
 }
 
 #content > #content-body .dropdown-item.active::before {
@@ -583,6 +599,10 @@ body .fs-sm {
 #content > #content-body form .form-control {
   padding: 0.7em 1em !important;
   height: auto !important;
+}
+
+#content > #content-body form select.form-control {
+  padding: 0.7em 1.7em 0.7em 1em !important;
 }
 
 #content > #content-body form .form-button {

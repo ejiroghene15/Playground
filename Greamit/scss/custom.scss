@@ -39,7 +39,7 @@ body {
 	position: fixed;
 	bottom: 0;
 	z-index: 3;
-	transition: 0.5s;
+	transition: width 0.5s;
 
 	&.active {
 		width: 80px;
@@ -236,7 +236,6 @@ body {
 			padding: 0.8em 2em;
 			font-weight: bold;
 			letter-spacing: 0.5px;
-			transition: 0.3s;
 
 			> a {
 				text-decoration: none;
@@ -259,7 +258,7 @@ body {
 				}
 
 				> .menu-label {
-					transition: 0.3s;
+					transition: opacity 0.3s;
 
 					font-size: 1.1em;
 					vertical-align: text-top;
@@ -346,6 +345,17 @@ body {
 					right: 8px;
 					top: -20px;
 				}
+				@include mq(768px) {
+					left: 0px !important;
+					&::before {
+						left: 6px;
+						right: auto;
+					}
+					&::after {
+						left: 6px;
+						right: auto;
+					}
+				}
 			}
 		}
 
@@ -355,6 +365,12 @@ body {
 			position: relative;
 			font-size: 14px;
 			font-weight: bolder;
+			color: black;
+
+			&:focus,
+			&:hover {
+				background-color: #d2145926;
+			}
 			&.active {
 				background-color: transparent;
 				&::before {
@@ -375,7 +391,6 @@ body {
 					background-color: var(--primary-color);
 					filter: opacity(15%);
 				}
-				color: black;
 			}
 		}
 
@@ -498,6 +513,9 @@ body {
 			.form-control {
 				padding: 0.7em 1em !important;
 				height: auto !important;
+			}
+			select.form-control {
+				padding: 0.7em 1.7em 0.7em 1em !important;
 			}
 			.form-button {
 				background-color: var(--primary-color);

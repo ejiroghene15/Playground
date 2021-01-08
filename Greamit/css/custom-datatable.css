@@ -8,6 +8,10 @@
   margin: auto !important;
 }
 
+.table-responsive .row td {
+  cursor: pointer;
+}
+
 .sorting::before, .sorting::after,
 .sorting_asc::before,
 .sorting_asc::after,

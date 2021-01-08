@@ -1,223 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Greamit</title>
-        <link
-            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./css/datatables.min.css" />
-        <link rel="stylesheet" href="./css/custom.css" />
-        <link rel="stylesheet" href="./css/custom-datatable.css" />
-    </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Greamit</title>
+		<link
+			href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/datatables.min.css" />
+		<link rel="stylesheet" href="./css/custom.css" />
+		<link rel="stylesheet" href="./css/custom-datatable.css" />
+	</head>
 
-    <body>
-        <main id="wrapper">
-            <!-- sidebar -->
-            <aside id="sidebar">
-                <nav id="content-nav">
-                    <div id="logo">
-                        <img
-                            src="./assets/imgs/logo-lg.svg"
-                            class="logo-lg"
-                            alt=""
-                        />
-                        <img
-                            src="./assets/imgs/logo-sm.png"
-                            class="logo-sm"
-                            alt=""
-                            width="25"
-                        />
-                        <span id="hamburger"><i class="bx bx-menu"></i></span>
-                    </div>
+	<body>
+		<main id="wrapper">
+			<!-- sidebar -->
+			<aside id="sidebar">
+				<nav id="content-nav">
+					<div id="logo">
+						<img src="./assets/imgs/logo-lg.svg" class="logo-lg" alt="" />
+						<img
+							src="./assets/imgs/logo-sm.png"
+							class="logo-sm"
+							alt=""
+							width="25"
+						/>
+						<span id="hamburger"><i class="bx bx-menu"></i></span>
+					</div>
 
-                    <section id="nav-widget">
-                        <form method="POST">
-                            <input
-                                type="search"
-                                placeholder="Search"
-                                id="search-bar"
-                            />
-                        </form>
-                        <div id="nav-notifications" class="d-sm-block d-none">
-                            <span class="notification-wrapper active">
-                                <i class="bx bx-envelope"></i>
-                            </span>
-                            <span class="notification-wrapper active">
-                                <i class="bx bx-bell"></i>
-                            </span>
-                        </div>
-                        <div id="nav-userprofile">
-                            <img
-                                src="./assets/imgs/timi-avatar.png"
-                                alt=""
-                                class="avatar"
-                            />
-                            <h4 id="username" class="d-sm-block d-none">
-                                <span>Temak Timi</span> <br />
-                                <small>Admin</small>
-                            </h4>
-                        </div>
-                    </section>
-                </nav>
+					<section id="nav-widget">
+						<form method="POST">
+							<input type="search" placeholder="Search" id="search-bar" />
+						</form>
+						<div id="nav-notifications" class="d-sm-block d-none">
+							<span class="notification-wrapper active">
+								<i class="bx bx-envelope"></i>
+							</span>
+							<span class="notification-wrapper active">
+								<i class="bx bx-bell"></i>
+							</span>
+						</div>
+						<div id="nav-userprofile">
+							<img src="./assets/imgs/timi-avatar.png" alt="" class="avatar" />
+							<h4 id="username" class="d-sm-block d-none">
+								<span>Temak Timi</span> <br />
+								<small>Admin</small>
+							</h4>
+						</div>
+					</section>
+				</nav>
 
-                <ul id="menu-list">
-                    <li>
-                        <a href="./index.html">
-                            <span class="menu-icon">
-                                <i class="bx bxs-dashboard"></i>
-                                <img
-                                    src="./assets/icons/dashboard.svg"
-                                    alt=""
-                                />
-                            </span>
-                            <span class="menu-label"> Dashboard </span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="">
-                            <span class="menu-icon">
-                                <i class="bx bx-link"></i>
-                                <img src="./assets/icons/greams.svg" alt="" />
-                            </span>
-                            <span class="menu-label">Greams</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./users.html">
-                            <span class="menu-icon">
-                                <i class="bx bx-user-circle"></i>
-                                <img src="./assets/icons/users.svg" alt="" />
-                            </span>
-                            <span class="menu-label">User</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./campaigns.html">
-                            <span class="menu-icon">
-                                <i class="bx bxs-megaphone"></i>
-                                <img src="./assets/icons/campaign.svg" alt="" />
-                            </span>
-                            <span class="menu-label">Campaigns</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./security.html">
-                            <span class="menu-icon">
-                                <i class="bx bx-check-shield"></i>
-                                <img src="./assets/icons/security.svg" alt="" />
-                            </span>
-                            <span class="menu-label">Security</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./profile.html">
-                            <span class="menu-icon">
-                                <i class="bx bx-cog"></i>
-                                <img src="./assets/icons/settings.svg" alt="" />
-                            </span>
-                            <span class="menu-label">Settings</span>
-                        </a>
-                    </li>
-                    <li class="mt-5 logout" style="color: var(--primary-color)">
-                        <a href="#">
-                            <span class="menu-icon">
-                                <i class="bx bx-log-in"></i>
-                                <img src="./assets/icons/log-out.svg" alt="" />
-                            </span>
-                            <span class="menu-label">Sign Out</span>
-                        </a>
-                    </li>
-                </ul>
-            </aside>
-            <!-- main content -->
-            <div id="content">
-                <div id="content-body">
-                    <!-- Modal -->
-                    <div
-                        class="modal fade"
-                        data-backdrop="static"
-                        id="userModal"
-                    >
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div
-                                    class="d-flex justify-content-between px-3 pt-3"
-                                >
-                                    <div class="dropdown">
-                                        <span
-                                            data-toggle="dropdown"
-                                            class="close"
-                                        >
-                                            <i
-                                                class="bx bx-dots-horizontal-rounded"
-                                            ></i>
-                                        </span>
-                                        <div class="dropdown-menu">
-                                            <a
-                                                class="dropdown-item active"
-                                                href="#"
-                                                >Delete Gream</a
-                                            >
-                                            <a class="dropdown-item" href="#"
-                                                >Blacklist Gream</a
-                                            >
-                                            <a class="dropdown-item" href="#"
-                                                >Deactivate Gream</a
-                                            >
-                                        </div>
-                                    </div>
+				<ul id="menu-list">
+					<li>
+						<a href="./index.html">
+							<span class="menu-icon">
+								<i class="bx bxs-dashboard"></i>
+								<img src="./assets/icons/dashboard.svg" alt="" />
+							</span>
+							<span class="menu-label"> Dashboard </span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="">
+							<span class="menu-icon">
+								<i class="bx bx-link"></i>
+								<img src="./assets/icons/greams.svg" alt="" />
+							</span>
+							<span class="menu-label">Greams</span>
+						</a>
+					</li>
+					<li>
+						<a href="./users.html">
+							<span class="menu-icon">
+								<i class="bx bx-user-circle"></i>
+								<img src="./assets/icons/users.svg" alt="" />
+							</span>
+							<span class="menu-label">User</span>
+						</a>
+					</li>
+					<li>
+						<a href="./campaigns.html">
+							<span class="menu-icon">
+								<i class="bx bxs-megaphone"></i>
+								<img src="./assets/icons/campaign.svg" alt="" />
+							</span>
+							<span class="menu-label">Campaigns</span>
+						</a>
+					</li>
+					<li>
+						<a href="./security.html">
+							<span class="menu-icon">
+								<i class="bx bx-check-shield"></i>
+								<img src="./assets/icons/security.svg" alt="" />
+							</span>
+							<span class="menu-label">Security</span>
+						</a>
+					</li>
+					<li>
+						<a href="./profile.html">
+							<span class="menu-icon">
+								<i class="bx bx-cog"></i>
+								<img src="./assets/icons/settings.svg" alt="" />
+							</span>
+							<span class="menu-label">Settings</span>
+						</a>
+					</li>
+					<li class="mt-5 logout" style="color: var(--primary-color)">
+						<a href="#">
+							<span class="menu-icon">
+								<i class="bx bx-log-in"></i>
+								<img src="./assets/icons/log-out.svg" alt="" />
+							</span>
+							<span class="menu-label">Sign Out</span>
+						</a>
+					</li>
+				</ul>
+			</aside>
+			<!-- main content -->
+			<div id="content">
+				<div id="content-body">
+					<!-- Modal -->
+					<div class="modal fade" data-backdrop="static" id="userModal">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="d-flex justify-content-between px-3 pt-3">
+									<div class="dropdown">
+										<span data-toggle="dropdown" class="close">
+											<i class="bx bx-dots-horizontal-rounded"></i>
+										</span>
+										<div class="dropdown-menu">
+											<a class="dropdown-item active" href="#">Delete Gream</a>
+											<a class="dropdown-item" href="#">Blacklist Gream</a>
+											<a class="dropdown-item" href="#">Deactivate Gream</a>
+										</div>
+									</div>
 
-                                    <div style="margin-top: -50px">
-                                        <img
-                                            src="./assets/imgs/timi-avatar.png"
-                                            alt=""
-                                            height="100"
-                                            width="100"
-                                        />
-                                        <p
-                                            class="font-weight-bold mt-3 mx-0 text-center"
-                                        >
-                                            @temak
-                                        </p>
-                                    </div>
-                                    <span
-                                        type="button"
-                                        class="close m-0 p-0"
-                                        data-dismiss="modal"
-                                        aria-label="Close"
-                                    >
-                                        <span aria-hidden="true">&times;</span>
-                                    </span>
-                                </div>
+									<div style="margin-top: -50px">
+										<img
+											src="./assets/imgs/timi-avatar.png"
+											alt=""
+											height="100"
+											width="100"
+										/>
+										<p class="font-weight-bold mt-3 mx-0 text-center">@temak</p>
+									</div>
+									<span
+										type="button"
+										class="close m-0 p-0"
+										data-dismiss="modal"
+										aria-label="Close"
+									>
+										<span aria-hidden="true">&times;</span>
+									</span>
+								</div>
 
-                                <div class="modal-body p-0">
-                                    <p
-                                        class="text-center font-weight-bold"
-                                        style="color: var(--primary-color)"
-                                    >
-                                        https://www.pexels.com/@startup-stock-photos
-                                    </p>
-                                    <p class="text-center">
-                                        <span class="font-weight-bolder"
-                                            >256 Likes</span
-                                        >
-                                        <span
-                                            class="d-inline-block mx-5 font-weight-bolder"
-                                            >56 Comments</span
-                                        >
-                                        <span class="font-weight-bolder"
-                                            >40 Reshares</span
-                                        >
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+								<div class="modal-body p-0 text-center">
+									<a
+										href="#"
+										class="font-weight-bold mb-3 d-inline-block"
+										style="color: var(--primary-color)"
+									>
+										https://www.pexels.com/@startup-stock-photos
+									</a>
+									<p class="text-center">
+										<span>256 Likes</span>
+										<span class="d-inline-block mx-5">56 Comments</span>
+										<span>40 Reshares</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                    <div class="card-grid">
+					<div class="card-grid">
 						<section>
 							<div class="info-count">
 								<span class="icon primary">
@@ -233,7 +189,7 @@
 							<div class="clearfix"></div>
 							<div class="info-bar primary"></div>
 							<p>Total Greams</p>
-                        </section>
+						</section>
 
 						<section>
 							<div class="info-count">
@@ -250,7 +206,7 @@
 							<div class="clearfix"></div>
 							<div class="info-bar blue"></div>
 							<p>Total Reshares</p>
-                        </section>
+						</section>
 
 						<section>
 							<div class="info-count">
@@ -259,15 +215,15 @@
 									<img src="./assets/icons/like.svg" alt="" />
 								</span>
 								<h1 class="number">4,507</h1>
-                            </div>
-                            <p class="float-right pt-0">
+							</div>
+							<p class="float-right pt-0">
 								<img src="./assets/icons/arrow-down.svg" alt="" />
 								<span class="font-weight-bold">8.99%</span>
-                            </p>
-                            <div class="clearfix"></div>
+							</p>
+							<div class="clearfix"></div>
 							<div class="info-bar warning"></div>
 							<p>Total Likes</p>
-                        </section>
+						</section>
 
 						<section>
 							<div class="info-count">
@@ -276,91 +232,104 @@
 									<img src="./assets/icons/chat.svg" alt="" />
 								</span>
 								<h1 class="number">1,678</h1>
-                            </div>
-                            <p class="float-right pt-0">
+							</div>
+							<p class="float-right pt-0">
 								<img src="./assets/icons/arrow-up.svg" alt="" />
 								<span class="font-weight-bold">16.99%</span>
-                            </p>
-                            <div class="clearfix"></div>
+							</p>
+							<div class="clearfix"></div>
 							<div class="info-bar purple"></div>
 							<p>Total Comment</p>
 						</section>
 					</div>
 
-                    <form>
-                        <div class="card mt-5">
-                            <div class="card-body py-2">
-                                <div class="float-right">
-                                    <img
-                                        style="cursor: pointer"
-                                        src="./assets/icons/delete.svg"
-                                        alt=""
-                                    />
-                                </div>
-                            </div>
-                        </div>
+					<form>
+						<div class="card mt-5">
+							<div class="card-body py-2">
+								<div class="float-right">
+									<img
+										style="cursor: pointer"
+										src="./assets/icons/delete.svg"
+										alt=""
+									/>
+								</div>
+							</div>
+						</div>
 
-                        <div class="card mt-3">
-                            <div class="card-body">
-                                <section class="table-responsive">
-                                    <table
-                                        class="table table-striped dt"
-                                    >
-                                        <thead>
-                                            <tr>
-                                                <th
-                                                    class="px-2"
-                                                    style="width: 1px"
-                                                >
-                                                    <input
-                                                        type="checkbox"
-                                                        class="select-all"
-                                                    />
-                                                </th>
-                                                <th>Username</th>
-                                                <th>Gream</th>
-                                                <th>Category</th>
-                                                <th>Date Posted</th>
-                                                <th>Likes</th>
-                                                <th>Comments</th>
-                                                <th>Reshares</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr
-                                                data-toggle="modal"
-                                                data-target="#userModal"
-                                            >
-                                                <th class="px-2">
-                                                    <input type="checkbox" />
-                                                </th>
-                                                <td>Row 1 Data 1</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 2</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </section>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+						<div class="card mt-3">
+							<div class="card-body">
+								<section class="table-responsive">
+									<table class="table table-striped dt">
+										<thead>
+											<tr>
+												<th class="px-2" style="width: 1px">
+													<input type="checkbox" class="select-all" />
+												</th>
+												<th>Username</th>
+												<th>Gream</th>
+												<th>Category</th>
+												<th>Date Posted</th>
+												<th>Likes</th>
+												<th>Comments</th>
+												<th>Reshares</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr data-toggle="modal" data-target="#userModal">
+												<th class="px-2">
+													<input type="checkbox" />
+												</th>
+												<td>Row 1 Data 1</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+											</tr>
+											<tr data-toggle="modal" data-target="#userModal">
+												<th class="px-2">
+													<input type="checkbox" />
+												</th>
+												<td>Row 1 Data 1</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+											</tr>
+											<tr data-toggle="modal" data-target="#userModal">
+												<th class="px-2">
+													<input type="checkbox" />
+												</th>
+												<td>Row 1 Data 1</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+												<td>Row 1 Data 2</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</div>
+					</form>
+				</div>
 
-                <footer class="text-dark mt-5 text-right">
-                    <p style="font-size: 14px">
-                        <b>Copyright 2020 Greamit All right reserved</b>
-                    </p>
-                </footer>
-            </div>
-        </main>
+				<footer class="text-dark mt-5 text-right">
+					<p style="font-size: 14px">
+						<b>Copyright 2020 Greamit All right reserved</b>
+					</p>
+				</footer>
+			</div>
+		</main>
 
-        <script src="./js/jquery.min.js"></script>
-        <script src="./js/popper.min.js"></script>
-        <script type="text/javascript" src="./js/datatables.min.js"></script>
-        <script src="./js/custom.js"></script>
-    </body>
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/popper.min.js"></script>
+		<script type="text/javascript" src="./js/datatables.min.js"></script>
+		<script src="./js/custom.js"></script>
+	</body>
 </html>
